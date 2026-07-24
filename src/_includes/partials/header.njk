@@ -39,17 +39,21 @@
 </header>
 
 <nav id="mobile-nav" class="mobile-nav" data-mobile-nav aria-label="{{ 'ניווט נייד' if lang == 'he' else 'Mobile navigation' }}">
-  <a class="mobile-nav__link" href="{{ home }}about/">{{ t.nav.about }}</a>
-  <a class="mobile-nav__link" href="{{ home }}works/">{{ t.nav.works }}</a>
-  <div class="mobile-nav__sub">
-    <a href="{{ home }}works/?category=branding-design">{{ t.nav.worksSub['branding-design'] }}</a>
-    <a href="{{ home }}works/?category=digital-web">{{ t.nav.worksSub['digital-web'] }}</a>
-    <a href="{{ home }}works/?category=campaigns">{{ t.nav.worksSub.campaigns }}</a>
-    <a href="{{ home }}works/?category=ai-video">{{ t.nav.worksSub['ai-video'] }}</a>
+  <div class="mobile-nav__scroll">
+    <a class="mobile-nav__link" href="{{ home }}about/" {% if navActive == 'about' %}aria-current="page"{% endif %}>{{ t.nav.about }}</a>
+    <div class="mobile-nav__item">
+      <a class="mobile-nav__link" href="{{ home }}works/" {% if navActive == 'works' %}aria-current="page"{% endif %}>{{ t.nav.works }}</a>
+      <div class="mobile-nav__sub">
+        <a href="{{ home }}works/?category=branding-design">{{ t.nav.worksSub['branding-design'] }}</a>
+        <a href="{{ home }}works/?category=digital-web">{{ t.nav.worksSub['digital-web'] }}</a>
+        <a href="{{ home }}works/?category=campaigns">{{ t.nav.worksSub.campaigns }}</a>
+        <a href="{{ home }}works/?category=ai-video">{{ t.nav.worksSub['ai-video'] }}</a>
+      </div>
+    </div>
+    <a class="mobile-nav__link" href="{{ home }}media-promotion/" {% if navActive == 'media' %}aria-current="page"{% endif %}>{{ t.nav.media }}</a>
+    <a class="mobile-nav__link" href="{{ home }}ai-video/" {% if navActive == 'aiVideo' %}aria-current="page"{% endif %}>{{ t.nav.aiVideo }}</a>
+    <a class="mobile-nav__link" href="{{ home }}contact/" {% if navActive == 'contact' %}aria-current="page"{% endif %}>{{ t.nav.contact }}</a>
+    <a class="mobile-nav__link mobile-nav__link--dan" href="{{ home }}dan-lebkovitz/" {% if navActive == 'dan' %}aria-current="page"{% endif %}>{{ t.nav.dan }}</a>
+    <a class="mobile-nav__cta" href="{{ home }}contact/">{{ t.nav.headerCta }}</a>
   </div>
-  <a class="mobile-nav__link" href="{{ home }}media-promotion/">{{ t.nav.media }}</a>
-  <a class="mobile-nav__link" href="{{ home }}ai-video/">{{ t.nav.aiVideo }}</a>
-  <a class="mobile-nav__link" href="{{ home }}contact/">{{ t.nav.contact }}</a>
-  <a class="mobile-nav__link mobile-nav__link--dan" href="{{ home }}dan-lebkovitz/">{{ t.nav.dan }}</a>
-  <a class="btn btn-primary" href="{{ home }}contact/" style="margin-block-start: var(--space-md);">{{ t.nav.headerCta }}</a>
 </nav>
