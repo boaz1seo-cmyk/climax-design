@@ -21,7 +21,7 @@ description: "רוצים להתחיל פרויקט מיתוג, עיצוב או �
 
 {{ leadStripMacro.leadStrip("he", business, t, "contact-top") }}
 
-<section class="room room--white">
+<section class="room room--white room--form">
   <div class="container">
     <div class="form-status" data-form-status role="status" aria-live="polite"></div>
 
@@ -33,26 +33,26 @@ description: "רוצים להתחיל פרויקט מיתוג, עיצוב או �
       <input type="hidden" name="redirect" value="{{ business.url }}/thank-you/">
 
       <div class="form-field">
-        <label for="name">{{ t.form.name }} <span aria-hidden="true">*</span></label>
+        <label for="name">{{ t.form.name }} <span class="form-required" aria-hidden="true">*</span></label>
         <input type="text" id="name" name="name" placeholder="{{ t.form.namePlaceholder }}" required autocomplete="name">
         <span class="form-error" role="alert"></span>
       </div>
 
       <div class="form-field">
-        <label for="phone">{{ t.form.phone }} <span aria-hidden="true">*</span></label>
+        <label for="phone">{{ t.form.phone }} <span class="form-required" aria-hidden="true">*</span></label>
         <input type="tel" id="phone" name="phone" placeholder="{{ t.form.phonePlaceholder }}" required autocomplete="tel">
         <span class="form-error" role="alert"></span>
       </div>
 
       <div class="form-field">
-        <label for="email">{{ t.form.email }} <span aria-hidden="true">*</span></label>
-        <input type="email" id="email" name="email" placeholder="{{ t.form.emailPlaceholder }}" required autocomplete="email">
+        <label for="email">{{ t.form.email }}</label>
+        <input type="email" id="email" name="email" placeholder="{{ t.form.emailPlaceholder }}" autocomplete="email">
         <span class="form-error" role="alert"></span>
       </div>
 
       <div class="form-field">
-        <label for="projectType">{{ t.form.projectType }} <span aria-hidden="true">*</span></label>
-        <select id="projectType" name="project_type" required>
+        <label for="projectType">{{ t.form.projectType }}</label>
+        <select id="projectType" name="project_type">
           <option value="" disabled selected>{{ t.form.projectTypePlaceholder }}</option>
           {% for key, label in t.form.projectTypes %}
           <option value="{{ key }}">{{ label }}</option>
@@ -72,7 +72,7 @@ description: "רוצים להתחיל פרויקט מיתוג, עיצוב או �
       </div>
 
       <div class="form-field form-field--full">
-        <label for="message">{{ t.form.message }} <span aria-hidden="true">*</span></label>
+        <label for="message">{{ t.form.message }} <span class="form-required" aria-hidden="true">*</span></label>
         <textarea id="message" name="message" placeholder="{{ t.form.messagePlaceholder }}" required></textarea>
         <span class="form-error" role="alert"></span>
       </div>

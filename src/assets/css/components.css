@@ -1302,6 +1302,14 @@ a.contact-icons__link {
 /* =========================================================
    Forms
    ========================================================= */
+.room--form {
+  padding-block: var(--space-2xl);
+}
+@media (max-width: 640px) {
+  .room--form {
+    padding-block: var(--space-xl);
+  }
+}
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1312,12 +1320,13 @@ a.contact-icons__link {
 @media (max-width: 640px) {
   .form-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-sm);
   }
 }
 .form-field {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2xs);
+  gap: var(--space-3xs);
   text-align: start;
 }
 .form-field--full {
@@ -1326,6 +1335,9 @@ a.contact-icons__link {
 .form-field label {
   font-size: var(--step-small);
   font-weight: 600;
+}
+.form-required {
+  color: var(--accent);
 }
 .form-field input,
 .form-field select,
@@ -1336,16 +1348,58 @@ a.contact-icons__link {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: var(--space-sm);
+  font-family: inherit;
+  font-size: 1rem;
   color: var(--text);
+  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+@media (max-width: 640px) {
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    padding: var(--space-xs);
+  }
+}
+.form-field input:hover,
+.form-field select:hover,
+.form-field textarea:hover {
+  border-color: var(--text-dim);
 }
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
+  outline: none;
   border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a8a49e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-sm) center;
+  padding-inline-end: var(--space-xl);
+}
+[dir="rtl"] .form-field select {
+  background-position: left var(--space-sm) center;
 }
 .form-field textarea {
   resize: vertical;
   min-height: 8rem;
+}
+@media (max-width: 640px) {
+  .form-field textarea {
+    min-height: 6rem;
+  }
+}
+.form-grid .btn[type="submit"] {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .form-grid .btn[type="submit"] {
+    width: auto;
+    min-width: 14rem;
+  }
 }
 .form-field.has-error input,
 .form-field.has-error select,
