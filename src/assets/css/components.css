@@ -496,6 +496,11 @@
   padding-inline-start: 6vw;
   padding-block-end: 12vh;
 }
+@media (max-width: 720px) {
+  .hero--video .hero__inner {
+    padding-block-end: 8vh;
+  }
+}
 .hero__inner {
   max-width: 60rem;
   margin-inline: auto;
@@ -1586,7 +1591,8 @@ a.contact-icons__link {
 }
 @media (max-width: 720px) {
   .lead-strip {
-    padding-block: var(--space-md);
+    padding-block-start: var(--space-lg);
+    padding-block-end: var(--space-md);
   }
   .lead-strip__inner {
     flex-direction: column;
