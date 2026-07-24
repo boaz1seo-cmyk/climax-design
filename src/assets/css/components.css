@@ -1592,6 +1592,16 @@ a.contact-icons__link {
   }
   .lead-strip__form {
     flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: var(--space-2xs);
+  }
+  .lead-strip__field {
+    flex: none;
+    width: 100%;
+  }
+  .lead-strip__submit {
+    width: 100%;
   }
 }
 
