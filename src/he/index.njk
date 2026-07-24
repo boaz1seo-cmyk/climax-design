@@ -1,0 +1,190 @@
+---
+layout: layouts/base.njk
+lang: he
+dir: rtl
+navActive: home
+permalink: /index.html
+title: "Climax Design | סוכנות דיגיטל בוטיק למיתוג ועיצוב ברמת גן"
+description: "סוכנות בוטיק במתחם הבורסה רמת גן: מיתוג, עיצוב גרפי ודיגיטל, קידום ממומן בפייסבוק, אינסטגרם וגוגל, ו-AI ווידאו. צוות מוביל בראשות בועז לבקוביץ', בוגר בצלאל."
+schema:
+  "@context": "https://schema.org"
+  "@type": "ProfessionalService"
+  "name": "Climax Design"
+  "url": "https://climax-design.co.il/"
+  "telephone": "+972522908725"
+  "email": "boaz@climax-design.co.il"
+  "priceRange": "$$"
+  "founder":
+    "@type": "Person"
+    "name": "בועז לבקוביץ'"
+  "address":
+    "@type": "PostalAddress"
+    "streetAddress": "ז'בוטינסקי 33, מגדלי התאומים, מתחם הבורסה"
+    "addressLocality": "רמת גן"
+    "addressCountry": "IL"
+  "geo":
+    "@type": "GeoCoordinates"
+    "latitude": 32.0824
+    "longitude": 34.8115
+  "areaServed": "IL"
+  "review":
+    - "@type": "Review"
+      "reviewBody": "מרוצים מאוד: ממהירות התגובה, מהקריאייטיב, מהקמפיינים, וכמובן מכמות ההזמנות שהולכת וגדלה!"
+      "author":
+        "@type": "Organization"
+        "name": "כרמל מלון יולדות"
+    - "@type": "Review"
+      "reviewBody": "מוכשרים בטירוף, מאוד כיף לעבוד איתם. ממליצה בחום!"
+      "author":
+        "@type": "Person"
+        "name": "לימור גרבר"
+    - "@type": "Review"
+      "reviewBody": "סטודיו מאוד מקצועי ושירותי, עם מגוון רחב של יכולות. מומלץ בחום רב."
+      "author":
+        "@type": "Person"
+        "name": "רועי ארבל"
+    - "@type": "Review"
+      "reviewBody": "סטודיו מקצועי מאוד עם שירות מצוין. עובדים איתם הרבה שנים. ממליצה בחום."
+      "author":
+        "@type": "Organization"
+        "name": "Test InSight"
+    - "@type": "Review"
+      "reviewBody": "עברתי כמה משרדי פרסום עד שהגעתי לבועז. כבר בשיחה הראשונה הבנתי שיש לי עסק עם מקצוען. הפוסטים הממומנים הביאו תגובות, והכי חשוב: כסף בקופה. זמין לכל שאלה ובקשה."
+      "author":
+        "@type": "Person"
+        "name": "גלית יעקובי"
+---
+{% import "macros/work-card.njk" as cards %}
+{% import "macros/lead-strip.njk" as leadStripMacro %}
+{% import "partials/client-marquee.njk" as marqueeMacro %}
+{% import "macros/custom-icons.njk" as icons %}
+{% set t = i18n.he %}
+
+<section class="hero hero--video">
+  <div class="hero__media" aria-hidden="true">
+    <video autoplay muted loop playsinline poster="/assets/video/showreel-poster.jpg">
+      <source src="/assets/video/showreel.webm" type="video/webm">
+      <source src="/assets/video/showreel.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero__inner">
+    <h1 class="hero__headline">
+      <span class="hero__headline-line display-heading is-active" data-headline-line>קריאייטיב שמרגש.</span>
+      <span class="hero__headline-line display-heading" data-headline-line>מיתוג שיזכרו אותך.</span>
+      <span class="hero__headline-line display-heading" data-headline-line>פרסום דיגיטלי שמביא תוצאות.</span>
+    </h1>
+    <a class="btn btn-primary" href="/contact/" data-animate>
+      בואו נעשה משהו מרשים יחד
+      <span class="btn-arrow" aria-hidden="true">←</span>
+    </a>
+  </div>
+  <div class="hero__scrollcue" aria-hidden="true"><span></span></div>
+</section>
+
+{{ leadStripMacro.leadStrip("he", business, t, "home") }}
+
+<section class="room room--charcoal">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>מה אנחנו עושים</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>שירותים שבונים מותג שלם</h2>
+      <p class="prose" data-animate>סוכנות בוטיק שמעניקה שירותי קריאייטיב, מיתוג וקידום בכל ערוצי המדיה תחת קורת גג אחת. צוות מקצועי ושירותי, תשומת לב אישית לכל לקוח.</p>
+    </div>
+
+    <div class="feature-grid" data-animate-group>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.brandStrategyIcon() }}</span>
+        <span class="feature__index">01</span>
+        <h3 class="feature__title">מיתוג ואסטרטגיה</h3>
+        <p class="feature__body">בניית מותג מהיסוד או ריענון מותג קיים — מחקר, בידול, שפה חזותית מלאה וספר מותג מסודר.</p>
+        <a class="btn btn-ghost" href="/works/?category=branding-design">{{ t.cta.readMore }} <span class="btn-arrow" aria-hidden="true">←</span></a>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.graphicDigitalIcon() }}</span>
+        <span class="feature__index">02</span>
+        <h3 class="feature__title">עיצוב גרפי ודיגיטל</h3>
+        <p class="feature__body">עיצוב UI לאתרים ולאפליקציות, דפי נחיתה ממירים, קמפיינים ויזואליים ואריזות — בסטנדרט בצלאל ובדיוק בוטיק.</p>
+        <a class="btn btn-ghost" href="/works/">{{ t.cta.readMore }} <span class="btn-arrow" aria-hidden="true">←</span></a>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.paidSocialIcon() }}</span>
+        <span class="feature__index">03</span>
+        <h3 class="feature__title">פרסום דיגיטלי (פייסבוק, אינסטגרם, גוגל)</h3>
+        <p class="feature__body">קמפיינים בפייסבוק, אינסטגרם וגוגל מקצה לקצה, וניהול נוכחות דיגיטלית שבונה מותג ומייצרת פניות.</p>
+        <a class="btn btn-ghost" href="/media-promotion/">{{ t.cta.readMore }} <span class="btn-arrow" aria-hidden="true">←</span></a>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.aiVideoIcon() }}</span>
+        <span class="feature__index">04</span>
+        <h3 class="feature__title">AI, וידאו ותוכן</h3>
+        <p class="feature__body">סרטוני AI מתקדמים, תדמית ופרסומות, רילס ותוכן קצר, עריכת וידאו ומושן גרפיקס — מהתסריט ועד הקאט הסופי.</p>
+        <a class="btn btn-ghost" href="/ai-video/">{{ t.cta.readMore }} <span class="btn-arrow" aria-hidden="true">←</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="room room--light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>תיק העבודות</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>עבודות נבחרות</h2>
+    </div>
+    <div class="featured-works-grid" data-animate-group>
+      {% for work in works %}
+        {% if work.featured %}{{ cards.featuredWorkCard(work, "he", t, "/") }}{% endif %}
+      {% endfor %}
+    </div>
+    <div class="center-col" style="margin-block-start: var(--space-2xl);">
+      <a class="btn btn-primary" href="/works/">{{ t.cta.seeWorks }} <span class="btn-arrow" aria-hidden="true">←</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="room room--mid" data-quote-carousel>
+  <div class="container">
+    <div class="quote">
+      <span class="quote__mark" aria-hidden="true">”</span>
+      <div class="quote__viewport">
+        <blockquote class="quote__slide is-active" data-quote-slide>
+          <p class="quote__text">מרוצים מאוד: ממהירות התגובה, מהקריאייטיב, מהקמפיינים, וכמובן מכמות ההזמנות שהולכת וגדלה!</p>
+          <footer class="quote__author"><strong>כרמל מלון יולדות</strong> · לקוח קידום ממומן</footer>
+        </blockquote>
+        <blockquote class="quote__slide" data-quote-slide>
+          <p class="quote__text">מוכשרים בטירוף, מאוד כיף לעבוד איתם. ממליצה בחום!</p>
+          <footer class="quote__author"><strong>לימור גרבר</strong> · מנהלת שיווק, טמפו משקאות</footer>
+        </blockquote>
+        <blockquote class="quote__slide" data-quote-slide>
+          <p class="quote__text">סטודיו מאוד מקצועי ושירותי, עם מגוון רחב של יכולות. מומלץ בחום רב.</p>
+          <footer class="quote__author"><strong>רועי ארבל</strong> · מנהל מותג, XL אנרגיה</footer>
+        </blockquote>
+        <blockquote class="quote__slide" data-quote-slide>
+          <p class="quote__text">סטודיו מקצועי מאוד עם שירות מצוין. עובדים איתם הרבה שנים. ממליצה בחום.</p>
+          <footer class="quote__author"><strong>Test InSight</strong> · לקוח שנים רבות</footer>
+        </blockquote>
+        <blockquote class="quote__slide" data-quote-slide>
+          <p class="quote__text">עברתי כמה משרדי פרסום עד שהגעתי לבועז. כבר בשיחה הראשונה הבנתי שיש לי עסק עם מקצוען. הפוסטים הממומנים הביאו תגובות, והכי חשוב: כסף בקופה. זמין לכל שאלה ובקשה.</p>
+          <footer class="quote__author"><strong>גלית יעקובי</strong> · מעצבת שמלות כלה</footer>
+        </blockquote>
+      </div>
+      <div class="quote-controls">
+        <button class="quote-nav" type="button" data-quote-prev aria-label="ההמלצה הקודמת">
+          <span aria-hidden="true">→</span>
+        </button>
+        <div class="quote-dots" data-quote-dots></div>
+        <button class="quote-nav" type="button" data-quote-next aria-label="ההמלצה הבאה">
+          <span aria-hidden="true">←</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ marqueeMacro.clientMarquee(t, buildId) }}
+
+<section class="room room--white">
+  <div class="container center-col">
+    <h2 class="display-heading" style="font-size: var(--step-h1); max-width: 40rem;" data-animate>{{ t.cta.letsTalk }}</h2>
+    <a class="btn btn-primary" style="margin-block-start: var(--space-lg);" href="/contact/" data-animate>{{ t.cta.contactButton }} <span class="btn-arrow" aria-hidden="true">←</span></a>
+  </div>
+</section>

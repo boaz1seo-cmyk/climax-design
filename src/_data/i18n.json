@@ -1,0 +1,214 @@
+{
+  "he": {
+    "htmlLang": "he",
+    "dir": "rtl",
+    "skipToContent": "דלג לתוכן הראשי",
+    "nav": {
+      "about": "עלינו",
+      "works": "עבודות",
+      "worksSub": {
+        "branding-design": "מיתוג ועיצוב",
+        "digital-web": "UI/UX ואתרים",
+        "campaigns": "קמפיינים בדיגיטל",
+        "ai-video": "סרטוני AI"
+      },
+      "media": "קידום במדיה",
+      "aiVideo": "AI ווידאו",
+      "dan": "דן לבקוביץ' ז\"ל",
+      "contact": "צור קשר",
+      "menuOpen": "פתיחת תפריט",
+      "menuClose": "סגירת תפריט",
+      "langSwitch": "English",
+      "langSwitchAria": "החלף לאתר באנגלית",
+      "headerCta": "דברו איתנו"
+    },
+    "leadStrip": {
+      "defaultHeading": "בואו נדבר על הפרויקט הבא שלכם",
+      "cta": "חזרו אליי",
+      "submitting": "שולח…",
+      "namePlaceholder": "שם מלא",
+      "phonePlaceholder": "טלפון"
+    },
+    "clientMarquee": {
+      "heading": "לקוחות שעוברים איתנו דרך"
+    },
+    "footer": {
+      "tagline": "מיתוג, עיצוב ופרסום בדיגיטל, לחברות מובילות בארץ ובעולם.",
+      "sitemap": "מפת האתר",
+      "contactUs": "יצירת קשר",
+      "followUs": "עקבו אחרינו",
+      "accessibility": "הצהרת נגישות",
+      "rights": "כל הזכויות שמורות",
+      "dedication": "האתר מוקדש לזכרו של <span style=\"white-space: nowrap\">דני לבקוביץ' ז\"ל</span>, מחלוצי האנימציה הקלאסית בארץ, יוצר ״אלפי״"
+    },
+    "cta": {
+      "letsTalk": "בואו נדבר על הפרויקט הבא שלכם",
+      "contactButton": "יצירת קשר",
+      "seeWorks": "לצפייה בעבודות",
+      "readMore": "לצפייה",
+      "sendMessage": "שליחת הודעה",
+      "backToTop": "חזרה למעלה"
+    },
+    "whatsapp": {
+      "aria": "פתיחת שיחת וואטסאפ",
+      "defaultMessage": "היי, אשמח לשמוע פרטים על שירותי הסטודיו"
+    },
+    "form": {
+      "name": "שם מלא",
+      "namePlaceholder": "איך קוראים לך?",
+      "phone": "טלפון",
+      "phonePlaceholder": "050-000-0000",
+      "email": "אימייל",
+      "emailPlaceholder": "name@example.com",
+      "projectType": "סוג הפרויקט",
+      "projectTypePlaceholder": "בחרו סוג פרויקט",
+      "projectTypes": {
+        "branding": "מיתוג",
+        "ui": "עיצוב UI / UX",
+        "graphic": "עיצוב גרפי",
+        "web": "עיצוב ובניית אתרים",
+        "media": "קידום ממומן במדיה",
+        "aiVideo": "AI ווידאו / עריכת וידאו",
+        "other": "אחר"
+      },
+      "budget": "תקציב משוער",
+      "budgetPlaceholder": "בחרו טווח תקציב",
+      "budgets": {
+        "b1": "עד 10,000 ₪",
+        "b2": "10,000–25,000 ₪",
+        "b3": "25,000–50,000 ₪",
+        "b4": "50,000 ₪ ומעלה",
+        "b5": "טרם גיבשתי תקציב"
+      },
+      "message": "הודעה",
+      "messagePlaceholder": "ספרו לנו בקצרה על הפרויקט שלכם",
+      "submit": "שליחת הפנייה",
+      "submitting": "שולח…",
+      "successTitle": "ההודעה נשלחה בהצלחה",
+      "successBody": "תודה שפניתם אלינו. נחזור אליכם בהקדם, בדרך כלל בתוך יום עסקים אחד.",
+      "errorTitle": "משהו השתבש",
+      "errorBody": "לא הצלחנו לשלוח את ההודעה. אפשר לנסות שוב, או ליצור קשר ישירות בוואטסאפ.",
+      "errors": {
+        "required": "שדה חובה",
+        "invalidEmail": "כתובת אימייל לא תקינה",
+        "invalidPhone": "מספר טלפון לא תקין"
+      }
+    },
+    "categories": {
+      "all": "הכל",
+      "branding-design": "מיתוג ועיצוב",
+      "digital-web": "UI/UX ואתרים",
+      "campaigns": "קמפיינים בדיגיטל",
+      "ai-video": "סרטוני AI"
+    },
+    "meta": {
+      "siteName": "Climax Design — סוכנות דיגיטל וסטודיו למיתוג"
+    }
+  },
+  "en": {
+    "htmlLang": "en",
+    "dir": "ltr",
+    "skipToContent": "Skip to main content",
+    "nav": {
+      "about": "About",
+      "works": "Work",
+      "worksSub": {
+        "branding-design": "Branding & Design",
+        "digital-web": "Digital & Web",
+        "campaigns": "Campaigns",
+        "ai-video": "AI Video"
+      },
+      "media": "Media Advertising",
+      "aiVideo": "AI Video",
+      "dan": "Dan Levkovitch z\"l",
+      "contact": "Contact",
+      "menuOpen": "Open menu",
+      "menuClose": "Close menu",
+      "langSwitch": "עברית",
+      "langSwitchAria": "Switch to Hebrew site",
+      "headerCta": "Let's talk"
+    },
+    "leadStrip": {
+      "defaultHeading": "Let's talk about your next project",
+      "cta": "Get in touch",
+      "submitting": "Sending…",
+      "namePlaceholder": "Full Name",
+      "phonePlaceholder": "Phone"
+    },
+    "clientMarquee": {
+      "heading": "Clients who journey with us"
+    },
+    "footer": {
+      "tagline": "Branding, design and digital advertising, for leading companies in Israel and worldwide.",
+      "sitemap": "Sitemap",
+      "contactUs": "Contact",
+      "followUs": "Follow us",
+      "accessibility": "Accessibility Statement",
+      "rights": "All rights reserved",
+      "dedication": "This site is dedicated to the memory of <span style=\"white-space: nowrap\">Dan Levkovitch z\"l</span>, a pioneer of classic Israeli animation, creator of “Alfie”"
+    },
+    "cta": {
+      "letsTalk": "Let's talk about your next project",
+      "contactButton": "Get in touch",
+      "seeWorks": "View our work",
+      "readMore": "View",
+      "sendMessage": "Send message",
+      "backToTop": "Back to top"
+    },
+    "whatsapp": {
+      "aria": "Open WhatsApp chat",
+      "defaultMessage": "Hi, I'd like to hear more about the studio's services"
+    },
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "What's your name?",
+      "phone": "Phone",
+      "phonePlaceholder": "050-000-0000",
+      "email": "Email",
+      "emailPlaceholder": "name@example.com",
+      "projectType": "Project type",
+      "projectTypePlaceholder": "Select a project type",
+      "projectTypes": {
+        "branding": "Branding",
+        "ui": "UI / UX Design",
+        "graphic": "Graphic Design",
+        "web": "Web Design & Development",
+        "media": "Paid Media Advertising",
+        "aiVideo": "AI Video / Video Editing",
+        "other": "Other"
+      },
+      "budget": "Estimated budget",
+      "budgetPlaceholder": "Select a budget range",
+      "budgets": {
+        "b1": "Up to ₪10,000",
+        "b2": "₪10,000–25,000",
+        "b3": "₪25,000–50,000",
+        "b4": "₪50,000+",
+        "b5": "Not sure yet"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us briefly about your project",
+      "submit": "Send inquiry",
+      "submitting": "Sending…",
+      "successTitle": "Message sent",
+      "successBody": "Thanks for reaching out. We'll get back to you within one business day.",
+      "errorTitle": "Something went wrong",
+      "errorBody": "We couldn't send your message. Please try again, or reach us directly on WhatsApp.",
+      "errors": {
+        "required": "This field is required",
+        "invalidEmail": "Please enter a valid email address",
+        "invalidPhone": "Please enter a valid phone number"
+      }
+    },
+    "categories": {
+      "all": "All",
+      "branding-design": "Branding & Design",
+      "digital-web": "Digital & Web",
+      "campaigns": "Campaigns",
+      "ai-video": "AI Video"
+    },
+    "meta": {
+      "siteName": "Climax Design — Branding & Digital Agency"
+    }
+  }
+}

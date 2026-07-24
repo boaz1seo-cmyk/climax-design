@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+lang: he
+dir: rtl
+navActive: dan
+permalink: /dan-lebkovitz/index.html
+title: "דני לבקוביץ' ז״ל | קריקטוריסט ואנימטור, יוצר אלפי"
+description: "לזכרו של דני לבקוביץ' (1927–2002), קריקטוריסט ואנימטור, ניצול שואה, יוצר דמות ״אלפי״. ההשראה מאחורי Climax Design."
+schema:
+  "@context": "https://schema.org"
+  "@type": "Person"
+  "name": "דני לבקוביץ'"
+  "alternateName": "דני (לוסיאן) לבקוביץ'"
+  "birthDate": "1927"
+  "deathDate": "2002-11-08"
+  "jobTitle": "קריקטוריסט ואנימטור"
+  "description": "קריקטוריסט ואנימטור ישראלי, ניצול שואה יליד פריז, יוצר דמות \"אלפי\" בטלוויזיה החינוכית הישראלית."
+---
+{% import "macros/lead-strip.njk" as leadStripMacro %}
+{% set t = i18n.he %}
+
+<section class="hero hero--page">
+  <div class="hero__inner">
+    <div class="eyebrow" data-animate>מחווה אישית</div>
+    <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate><span style="white-space: nowrap">דני לבקוביץ' ז"ל</span></h1>
+    <p class="eyebrow" style="justify-content:center;" data-animate>מחלוצי האנימציה הקלאסית בארץ · <span class="ltr-embed" dir="ltr">1927–2002</span></p>
+  </div>
+</section>
+
+{{ leadStripMacro.leadStrip("he", business, t, "dan") }}
+
+<section class="room room--charcoal">
+  <div class="container">
+    <div class="prose" style="text-align:center; margin-inline:auto;" data-animate>
+      <p>
+        דני (לוסיאן) לבקוביץ' נולד ב-1927 בפריז. בשנות הכיבוש הנאצי, אמו הסתירה אותו במנזר כדי להצילו, ואילו היא עצמה נלקחה על ידי הגרמנים. ב-1947 הפליג לישראל על סיפון אוניית המעפילים ״המעפיל האלמוני״.
+      </p>
+      <p>
+        משנת 1954 ועד 1961 פרסם קריקטורות ואיורים בעיתון ״קול העם״. ב-1973 הצטרף לטלוויזיה החינוכית הישראלית כמעצב גרפי ואנימטור, ושם יצר את אחת הדמויות האהובות על ילדי ישראל, <strong>״אלפי״</strong>, דמות פלסטלינה מונפשת שליוותה דורות של ילדים ולימדה אותם קרוא וכתוב מתוך אהבה.
+      </p>
+      <p>
+        דני נפטר ב-2002. עיזבונו האמנותי שמור במוזיאון הישראלי לקריקטורה ולקומיקס בחולון. ב-2006 הוציאה אשתו שרה ספר לזכרו, ״דני בלי סודות: הארץ שלי״, אוסף קריקטורות פוליטיות שלו מלווה בפרשנות עדכנית.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="room room--light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>עיזבון אמנותי</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>קטעים מהארכיון</h2>
+    </div>
+    <div class="work-grid" data-animate-group>
+      {% for i in range(1, 5) %}
+      <div class="work-card" style="pointer-events:none;" data-animate-item>
+        <div class="work-card__media">
+          <div class="work-placeholder" role="img" aria-label="תמונת ארכיון של דני לבקוביץ'">
+            <span>ארכיון</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="room">
+  <div class="container center-col">
+    <span class="eyebrow" data-animate>ההשראה מאחורי Climax</span>
+    <h2 class="display-heading" style="font-size: var(--step-h1); max-width: 44rem; margin-block-start: var(--space-md);" data-animate>האמנות עוברת מדור לדור</h2>
+    <p class="prose" data-animate>
+      <span style="white-space: nowrap">בועז לבקוביץ'</span>, בנו של דני ומייסד הסטודיו, ממשיך את המסורת המשפחתית של יצירה, דיוק ואהבת אמנות, הפעם בעולם המיתוג והעיצוב הדיגיטלי. השם ״קליימקס״ נושא איתו את הרוח הזו: כל פרויקט הוא הזדמנות ליצור משהו בלתי נשכח, בדיוק כפי שדני עשה עבור דורות של ילדים ישראלים.
+    </p>
+    <a class="btn btn-ghost" style="margin-block-start: var(--space-md);" href="/about/" data-animate>קראו עוד עלינו <span class="btn-arrow" aria-hidden="true">←</span></a>
+  </div>
+</section>

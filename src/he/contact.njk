@@ -1,0 +1,130 @@
+---
+layout: layouts/base.njk
+lang: he
+dir: rtl
+navActive: contact
+permalink: /contact/index.html
+title: "צור קשר | Climax Design — סוכנות בוטיק, רמת גן"
+description: "רוצים להתחיל פרויקט מיתוג, עיצוב או קידום דיגיטלי? מלאו את הטופס או דברו איתנו ישירות בוואטסאפ — נחזור אליכם בתוך יום עסקים."
+---
+{% import "macros/custom-icons.njk" as icons %}
+{% import "macros/lead-strip.njk" as leadStripMacro %}
+{% set t = i18n.he %}
+
+<section class="hero hero--page">
+  <div class="hero__inner">
+    <div class="eyebrow" data-animate>צור קשר</div>
+    <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate>בואו נדבר על הפרויקט שלכם</h1>
+    <p class="prose" data-animate>מלאו את הפרטים ונחזור אליכם בהקדם, בדרך כלל בתוך יום עסקים אחד.</p>
+  </div>
+</section>
+
+{{ leadStripMacro.leadStrip("he", business, t, "contact-top") }}
+
+<section class="room room--white">
+  <div class="container">
+    <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+
+    <form class="form-grid" data-contact-form novalidate>
+      <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="access_key" value="{{ business.web3forms.accessKey }}">
+      <input type="hidden" name="subject" value="פנייה חדשה מאתר Climax Design">
+      <input type="hidden" name="from_name" value="טופס יצירת קשר — climax-design.co.il">
+      <input type="hidden" name="redirect" value="{{ business.url }}/thank-you/">
+
+      <div class="form-field">
+        <label for="name">{{ t.form.name }} <span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" placeholder="{{ t.form.namePlaceholder }}" required autocomplete="name">
+        <span class="form-error" role="alert"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="phone">{{ t.form.phone }} <span aria-hidden="true">*</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="{{ t.form.phonePlaceholder }}" required autocomplete="tel">
+        <span class="form-error" role="alert"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="email">{{ t.form.email }} <span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" placeholder="{{ t.form.emailPlaceholder }}" required autocomplete="email">
+        <span class="form-error" role="alert"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="projectType">{{ t.form.projectType }} <span aria-hidden="true">*</span></label>
+        <select id="projectType" name="project_type" required>
+          <option value="" disabled selected>{{ t.form.projectTypePlaceholder }}</option>
+          {% for key, label in t.form.projectTypes %}
+          <option value="{{ key }}">{{ label }}</option>
+          {% endfor %}
+        </select>
+        <span class="form-error" role="alert"></span>
+      </div>
+
+      <div class="form-field form-field--full">
+        <label for="budget">{{ t.form.budget }}</label>
+        <select id="budget" name="budget">
+          <option value="" disabled selected>{{ t.form.budgetPlaceholder }}</option>
+          {% for key, label in t.form.budgets %}
+          <option value="{{ key }}">{{ label }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-field form-field--full">
+        <label for="message">{{ t.form.message }} <span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" placeholder="{{ t.form.messagePlaceholder }}" required></textarea>
+        <span class="form-error" role="alert"></span>
+      </div>
+
+      <div class="form-field form-field--full">
+        <button class="btn btn-primary" type="submit">{{ t.form.submit }}</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="room room--light contact-icons-section">
+  <div class="container">
+    <div class="contact-info-row" data-animate-group>
+      <a href="tel:{{ business.phoneE164 }}" class="feature contact-icons__link" data-animate-item aria-label="התקשרו אלינו — {{ business.phoneDisplay }}">
+        <span class="feature__icon">{{ icons.phoneIcon() }}</span>
+        <span class="eyebrow">טלפון</span>
+      </a>
+      <a href="mailto:{{ business.email }}" class="feature contact-icons__link" data-animate-item aria-label="שלחו לנו אימייל — {{ business.email }}">
+        <span class="feature__icon">{{ icons.mailIcon() }}</span>
+        <span class="eyebrow">אימייל</span>
+      </a>
+      <a href="https://waze.com/ul?q={{ (business.address.he.street + ' ' + business.address.he.city) | urlencode }}" target="_blank" rel="noopener" class="feature contact-icons__link" data-animate-item aria-label="פתחו בוויז — {{ business.address.he.street }}, {{ business.address.he.city }}">
+        <span class="feature__icon">{{ icons.mapPinIcon() }}</span>
+        <span class="eyebrow">כתובת</span>
+      </a>
+      <a href="https://wa.me/{{ business.whatsapp }}?text={{ t.whatsapp.defaultMessage | urlencode }}" target="_blank" rel="noopener" class="feature contact-icons__link" data-animate-item aria-label="{{ t.whatsapp.aria }}">
+        <span class="feature__icon">{% whatsappIcon 28 %}</span>
+        <span class="eyebrow">וואטסאפ</span>
+      </a>
+    </div>
+
+    {% if business.social.instagram or business.social.facebook or business.social.tiktok %}
+    <hr class="contact-icons__divider">
+    <p class="contact-icons__follow-heading">עקבו אחרינו</p>
+    <div class="contact-social-row" data-animate-group>
+      {% if business.social.tiktok %}
+      <a href="{{ business.social.tiktok }}" target="_blank" rel="noopener" class="feature contact-icons__link" data-animate-item aria-label="TikTok של Climax Design">
+        <span class="feature__icon">{% tiktokIcon 36 %}</span>
+      </a>
+      {% endif %}
+      {% if business.social.facebook %}
+      <a href="{{ business.social.facebook }}" target="_blank" rel="noopener" class="feature contact-icons__link" data-animate-item aria-label="Facebook של Climax Design">
+        <span class="feature__icon">{% facebookIcon 36 %}</span>
+      </a>
+      {% endif %}
+      {% if business.social.instagram %}
+      <a href="{{ business.social.instagram }}" target="_blank" rel="noopener" class="feature contact-icons__link" data-animate-item aria-label="Instagram של Climax Digital">
+        <span class="feature__icon">{% instagramIcon 36 %}</span>
+      </a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,53 @@
+---
+layout: layouts/base.njk
+lang: en
+dir: ltr
+navActive: about
+permalink: /en/about/index.html
+title: "About Us | Climax Design — Boutique Branding Agency, Ramat Gan"
+description: "A boutique studio at the Bursa Complex, Ramat Gan. Led by Boaz Levkovitch, a Bezalel graduate with 20+ years in creative and branding, continuing the legacy of Dan Levkovitch."
+---
+{% import "macros/lead-strip.njk" as leadStripMacro %}
+{% set t = i18n.en %}
+
+<section class="hero hero--page">
+  <div class="hero__inner">
+    <div class="eyebrow" data-animate>About us</div>
+    <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate>We're not just another agency.<br>We're where an idea becomes a brand people can't forget.</h1>
+    <p class="prose" style="font-size: var(--step-body-lg);" data-animate>
+      Creative, branding and advertising, under one roof, with the attention only a boutique can give. <strong><span style="white-space: nowrap">Boaz Levkovitch</span></strong>, a Bezalel graduate with 20 years of experience, leads every project from idea to a product that lives, breathes, and sells. He continues the legacy of animator and caricaturist <a href="/en/dan-lebkovitz/" style="text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px;"><span style="white-space: nowrap">Dan Levkovitch</span></a>, creator of “Alfie.”
+    </p>
+  </div>
+</section>
+
+{{ leadStripMacro.leadStrip("en", business, t, "about") }}
+
+<section class="room room--light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>Our approach</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>Why boutique?</h2>
+    </div>
+    <p class="prose" style="text-align:center; margin-inline:auto;" data-animate>
+      Because size is an advantage when it's small. With us, there's no “just another account.” Every brand gets a team that knows it deeply, real access to decision-makers, and attention to the smallest details: the pixel, the word, the first second of the video.
+    </p>
+  </div>
+</section>
+
+<section class="room room--charcoal">
+  <div class="container center-col">
+    <span class="eyebrow" data-animate>The inspiration behind Climax</span>
+    <h2 class="display-heading" style="font-size: var(--step-h1); max-width: 44rem; margin-block-start: var(--space-md);" data-animate>Art, passed down a generation</h2>
+    <p class="prose" data-animate>
+      The name “Climax” didn't come out of nowhere. It carries forward a tradition of craft, precision and a love of art that began long before I was born, with my father, <span style="white-space: nowrap">Dan Levkovitch</span>, a caricaturist and animator who created “Alfie.”
+    </p>
+    <a class="btn btn-ghost" style="margin-block-start: var(--space-md);" href="/en/dan-lebkovitz/" data-animate>Read the full story <span class="btn-arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section class="room room--pale">
+  <div class="container center-col">
+    <h2 class="display-heading" style="font-size: var(--step-h1); max-width: 40rem;" data-animate>{{ t.cta.letsTalk }}</h2>
+    <a class="btn btn-primary" style="margin-block-start: var(--space-lg);" href="/en/contact/" data-animate>{{ t.cta.contactButton }} <span class="btn-arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>

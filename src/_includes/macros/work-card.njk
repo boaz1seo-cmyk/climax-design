@@ -1,0 +1,35 @@
+{% macro workCard(work, lang, t, home) %}
+{% set title = work.titleHe if lang == 'he' else work.titleEn %}
+{% set cardHref = work.href if work.href else (home + "works/?category=" + work.category) %}
+{% set imageSrc = work.imageSrc if work.imageSrc else ("/assets/img/works/" + work.image) %}
+<a class="work-card" data-animate-item data-category="{{ work.category }}" href="{{ cardHref }}">
+  <div class="work-card__media{{ ' work-card__media--contain' if work.contain }}">
+    {% if work.image or work.imageSrc %}
+    <img src="{{ imageSrc }}" alt="{{ title }}" loading="lazy">
+    {% else %}
+    <div class="work-placeholder" role="img" aria-label="{{ title }}">
+      <span>{{ t.categories[work.category] }}</span>
+    </div>
+    {% endif %}
+    <div class="work-card__body">
+      <div class="work-card__cat">{{ t.categories[work.category] }}</div>
+      <h3 class="work-card__title">{{ title }}</h3>
+    </div>
+  </div>
+</a>
+{% endmacro %}
+
+{% macro featuredWorkCard(work, lang, t, home) %}
+{% set title = work.titleHe if lang == 'he' else work.titleEn %}
+{% set cardHref = work.href if work.href else (home + "works/?category=" + work.category) %}
+{% set imageSrc = work.imageSrc if work.imageSrc else ("/assets/img/works/" + work.image) %}
+<a class="featured-work-card" data-animate-item data-category="{{ work.category }}" href="{{ cardHref }}">
+  {% if work.image or work.imageSrc %}
+  <img src="{{ imageSrc }}" alt="{{ title }}" loading="lazy">
+  {% endif %}
+  <div class="featured-work-card__caption">
+    <div class="featured-work-card__cat">{{ t.categories[work.category] }}</div>
+    <h3 class="featured-work-card__title">{{ title }}</h3>
+  </div>
+</a>
+{% endmacro %}

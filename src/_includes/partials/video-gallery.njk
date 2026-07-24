@@ -1,0 +1,40 @@
+{% macro videoGallery(lang) %}
+{% set items = [
+  { file: "light-rail.mp4", he: "רכבת קלה", en: "Light Rail" },
+  { file: "btkn-open.mp4", he: "BTKN Open", en: "BTKN Open" },
+  { file: "maccabi-healthcare.mp4", he: "מכבי שירותי בריאות", en: "Maccabi Healthcare" },
+  { file: "ac-cleaning.mp4", he: "ניקוי מזגנים", en: "AC Cleaning" },
+  { file: "hitech.mp4", he: "היי-טק", en: "HiTech" },
+  { file: "animation.mp4", he: "סרטון אנימציה", en: "Animation" },
+  { file: "turgeman-realestate.mp4", he: "תורגמן נדל\"ן", en: "Turgeman Real Estate" },
+  { file: "xl-energy.mp4", he: "XL אנרגיה", en: "XL Energy" },
+  { file: "shacham.mp4", he: "שחם", en: "Shacham" }
+] %}
+<div class="video-grid" data-animate-group>
+  {% for item in items %}
+  <button class="video-tile" type="button" data-video-trigger
+    data-video-src="/assets/video/gallery/{{ item.file }}"
+    data-video-title="{{ item.he if lang == 'he' else item.en }}"
+    data-animate-item>
+    <img class="video-tile__poster" src="/assets/img/gallery/{{ item.file | replace('.mp4', '.jpg') }}" alt="" loading="lazy">
+    <span class="video-tile__play" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    </span>
+    <span class="video-tile__caption">
+      <span class="video-tile__caption-he">{{ item.he }}</span>
+      <span class="video-tile__caption-en">{{ item.en }}</span>
+    </span>
+  </button>
+  {% endfor %}
+</div>
+
+<div class="video-lightbox" data-video-lightbox hidden>
+  <div class="video-lightbox__backdrop" data-video-lightbox-close></div>
+  <div class="video-lightbox__panel" role="dialog" aria-modal="true" aria-label="{{ 'נגן וידאו' if lang == 'he' else 'Video player' }}">
+    <button class="video-lightbox__close" type="button" data-video-lightbox-close aria-label="{{ 'סגירה' if lang == 'he' else 'Close' }}">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6L18 18M18 6L6 18"/></svg>
+    </button>
+    <video data-video-lightbox-player controls playsinline></video>
+  </div>
+</div>
+{% endmacro %}

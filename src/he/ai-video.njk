@@ -1,0 +1,96 @@
+---
+layout: layouts/base.njk
+lang: he
+dir: rtl
+navActive: aiVideo
+permalink: /ai-video/index.html
+title: "יצירת סרטוני AI ועריכת וידאו | Climax Design"
+description: "יצירת סרטוני AI מתקדמים, סרטוני תדמית ופרסומות, רילס ותוכן קצר, עריכת וידאו ומושן גרפיקס, מהתסריט ועד הקאט הסופי. סוכנות בוטיק, רמת גן."
+schema:
+  "@context": "https://schema.org"
+  "@type": "Service"
+  "serviceType": "יצירת סרטוני AI ועריכת וידאו"
+  "name": "AI ווידאו"
+  "provider":
+    "@type": "ProfessionalService"
+    "name": "Climax Design"
+    "url": "https://climax-design.co.il/"
+  "areaServed": "IL"
+  "url": "https://climax-design.co.il/ai-video/"
+---
+{% import "partials/video-gallery.njk" as gallery %}
+{% import "macros/custom-icons.njk" as icons %}
+{% import "macros/lead-strip.njk" as leadStripMacro %}
+{% set t = i18n.he %}
+
+<section class="hero hero--page">
+  <div class="hero__inner">
+    <div class="eyebrow" data-animate>AI ווידאו</div>
+    <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate>יצירת סרטוני AI ועריכת וידאו</h1>
+    <p class="prose" style="font-size: var(--step-body-lg);" data-animate>
+      החזית החדשה של הקריאייטיב: יצירת סרטוני AI מתקדמים, סרטוני תדמית ופרסומות, רילס ותוכן קצר לרשתות, עריכת וידאו, מושן גרפיקס ואנימציה, מהתסריט ועד הקאט הסופי. שילוב כלי AI חכם שמקצר לוחות זמנים ומוזיל הפקות, בלי להתפשר על רמת הקריאייטיב.
+    </p>
+    <a class="btn btn-primary" href="/contact/" data-animate>{{ t.cta.contactButton }} <span class="btn-arrow" aria-hidden="true">←</span></a>
+  </div>
+</section>
+
+{{ leadStripMacro.leadStrip("he", business, t, "ai-video") }}
+
+<section class="room room--light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>מה אנחנו מייצרים</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>מהתסריט ועד הקאט הסופי</h2>
+    </div>
+    <div class="feature-grid feature-grid--3" data-animate-group>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.aiSparkIcon() }}</span>
+        <h3 class="feature__title">סרטוני AI מתקדמים</h3>
+        <p class="feature__body">תוכן ויזואלי חדשני שנוצר בעזרת כלי בינה מלאכותית מתקדמים.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.filmIcon() }}</span>
+        <h3 class="feature__title">סרטוני תדמית ופרסומות</h3>
+        <p class="feature__body">סיפור המותג שלכם בפורמט וידאו מקצועי ומשכנע.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.reelsIcon() }}</span>
+        <h3 class="feature__title">רילס ותוכן קצר</h3>
+        <p class="feature__body">תוכן קצר וקליט שנבנה במיוחד לשפת הרשתות החברתיות.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.editingIcon() }}</span>
+        <h3 class="feature__title">עריכת וידאו</h3>
+        <p class="feature__body">עריכה מדויקת שמספרת סיפור ושומרת על קצב וזרימה.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.motionIcon() }}</span>
+        <h3 class="feature__title">מושן גרפיקס ואנימציה</h3>
+        <p class="feature__body">גרפיקה נעה שמוסיפה עומק, בהירות ואופי לכל סרטון.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.aiToolsIcon() }}</span>
+        <h3 class="feature__title">כלי AI חכמים</h3>
+        <p class="feature__body">קיצור לוחות זמנים והוזלת הפקות, בלי להתפשר על רמת הקריאייטיב.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="room">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>שואוריל</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>עבודות נבחרות בווידאו</h2>
+    </div>
+
+    {{ gallery.videoGallery("he") }}
+  </div>
+</section>
+
+<section class="room room--white">
+  <div class="container center-col">
+    <h2 class="display-heading" style="font-size: var(--step-h1); max-width: 40rem;" data-animate>יש לכם רעיון לסרטון הבא שלכם?</h2>
+    <a class="btn btn-primary" style="margin-block-start: var(--space-lg);" href="/contact/" data-animate>{{ t.cta.contactButton }} <span class="btn-arrow" aria-hidden="true">←</span></a>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+---
+layout: layouts/base.njk
+lang: en
+dir: ltr
+navActive: none
+permalink: /en/accessibility/index.html
+title: "Accessibility Statement | Climax Design"
+description: "The accessibility statement for the Climax Design website, in accordance with Israeli Standard IS 5568 and WCAG 2.0 Level AA guidelines."
+---
+{% set t = i18n.en %}
+{% set a11y = business.accessibility %}
+
+<section class="hero hero--page">
+  <div class="hero__inner">
+    <div class="eyebrow" data-animate>Accessibility</div>
+    <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate>Accessibility Statement</h1>
+  </div>
+</section>
+
+<section class="room room--light">
+  <div class="container">
+    <div class="prose" data-animate>
+      <p>
+        The Climax Design website is continually working to improve accessibility for people with disabilities, in the belief that everyone deserves the right to browse the internet with dignity, independence and equality. The site was designed and built with reference to the accessibility guidelines of <strong>Israeli Standard IS 5568</strong> (based on the international WCAG 2.0 guidelines), at Level AA.
+      </p>
+
+      <h2 style="font-family: var(--font-en-body); font-size: var(--step-h2); color: var(--text); margin-block-start: var(--space-lg);">Accessibility accommodations on this site</h2>
+      <ul style="display:flex; flex-direction:column; gap: var(--space-xs); padding-inline-start: 1.5rem; list-style: disc;">
+        <li>Full keyboard navigation, including a “skip to main content” link.</li>
+        <li>Screen reader support: ARIA labeling, alt text for images, and correct language tagging (Hebrew/English) on every page.</li>
+        <li>Color contrast meeting Level AA requirements between text and background.</li>
+        <li>A hierarchical heading structure (H1–H3) on every page.</li>
+        <li>Support for reduced motion (prefers-reduced-motion) for users sensitive to animation.</li>
+        <li>Forms with clear labels, detailed error messages and guidance for correction.</li>
+      </ul>
+
+      <h2 style="font-family: var(--font-en-body); font-size: var(--step-h2); color: var(--text); margin-block-start: var(--space-lg);">Known limitations</h2>
+      <p>
+        We continue to work on improving the site's accessibility on an ongoing basis. Some parts of the site, such as embedded third-party video content (YouTube/Vimeo), may not be fully accessible. We work to minimize these gaps as much as possible.
+      </p>
+
+      <h2 style="font-family: var(--font-en-body); font-size: var(--step-h2); color: var(--text); margin-block-start: var(--space-lg);">Accessibility inquiries</h2>
+      <p>
+        Encountered an accessibility issue on the site? We'd love to hear from you and will address it promptly.
+      </p>
+      <ul style="display:flex; flex-direction:column; gap: var(--space-xs); padding-inline-start: 1.5rem; list-style: disc;">
+        <li>Accessibility coordinator: {{ a11y.coordinatorName | default("To be updated soon", true) }}</li>
+        <li>Email: {% if a11y.coordinatorEmail %}<a href="mailto:{{ a11y.coordinatorEmail }}">{{ a11y.coordinatorEmail }}</a>{% else %}<a href="mailto:{{ business.email }}">{{ business.email }}</a>{% endif %}</li>
+        <li>Phone: {% if a11y.coordinatorPhone %}{{ a11y.coordinatorPhone }}{% else %}<a href="tel:{{ business.phoneE164 }}">{{ business.phoneDisplay }}</a>{% endif %}</li>
+      </ul>
+
+      <p style="color: var(--text-dim); font-size: var(--step-small); margin-block-start: var(--space-lg);">
+        This statement was last updated in {{ a11y.statementDate | default("July 2026", true) }}.
+      </p>
+    </div>
+  </div>
+</section>

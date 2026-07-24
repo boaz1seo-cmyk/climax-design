@@ -1,0 +1,55 @@
+{% import "macros/logo.njk" as logoMacro %}
+{% set t = i18n[lang] %}
+{% set home = '/' if lang == 'he' else '/en/' %}
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+    <a class="logo" href="{{ home }}" aria-label="Climax Design — {{ home }}">
+      {{ logoMacro.climaxLogo('light', 'logo__img logo__img--light') }}
+      {{ logoMacro.climaxLogo('dark', 'logo__img logo__img--dark') }}
+    </a>
+
+    <nav class="main-nav" aria-label="{{ 'ניווט ראשי' if lang == 'he' else 'Main navigation' }}">
+      <a class="main-nav__link" href="{{ home }}about/" {% if navActive == 'about' %}aria-current="page"{% endif %}>{{ t.nav.about }}</a>
+
+      <div class="nav-item--has-sub">
+        <a class="main-nav__link" href="{{ home }}works/" {% if navActive == 'works' %}aria-current="page"{% endif %}>{{ t.nav.works }}</a>
+        <div class="nav-submenu">
+          <a class="nav-submenu__link" href="{{ home }}works/?category=branding-design">{{ t.nav.worksSub['branding-design'] }}</a>
+          <a class="nav-submenu__link" href="{{ home }}works/?category=digital-web">{{ t.nav.worksSub['digital-web'] }}</a>
+          <a class="nav-submenu__link" href="{{ home }}works/?category=campaigns">{{ t.nav.worksSub.campaigns }}</a>
+          <a class="nav-submenu__link" href="{{ home }}works/?category=ai-video">{{ t.nav.worksSub['ai-video'] }}</a>
+        </div>
+      </div>
+
+      <a class="main-nav__link" href="{{ home }}media-promotion/" {% if navActive == 'media' %}aria-current="page"{% endif %}>{{ t.nav.media }}</a>
+      <a class="main-nav__link" href="{{ home }}ai-video/" {% if navActive == 'aiVideo' %}aria-current="page"{% endif %}>{{ t.nav.aiVideo }}</a>
+      <a class="main-nav__link" href="{{ home }}contact/" {% if navActive == 'contact' %}aria-current="page"{% endif %}>{{ t.nav.contact }}</a>
+      <span class="main-nav__divider" aria-hidden="true"></span>
+      <a class="main-nav__link main-nav__link--dan" href="{{ home }}dan-lebkovitz/" {% if navActive == 'dan' %}aria-current="page"{% endif %}>{{ t.nav.dan }}</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="lang-switch" href="{{ page.url | altUrl('en' if lang == 'he' else 'he') }}" aria-label="{{ t.nav.langSwitchAria }}" hreflang="{{ 'en' if lang == 'he' else 'he' }}">{{ t.nav.langSwitch }}</a>
+      <a class="header-cta" href="{{ home }}contact/">{{ t.nav.headerCta }}</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle aria-label="{{ t.nav.menuOpen }}">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav id="mobile-nav" class="mobile-nav" data-mobile-nav aria-label="{{ 'ניווט נייד' if lang == 'he' else 'Mobile navigation' }}">
+  <a class="mobile-nav__link" href="{{ home }}about/">{{ t.nav.about }}</a>
+  <a class="mobile-nav__link" href="{{ home }}works/">{{ t.nav.works }}</a>
+  <div class="mobile-nav__sub">
+    <a href="{{ home }}works/?category=branding-design">{{ t.nav.worksSub['branding-design'] }}</a>
+    <a href="{{ home }}works/?category=digital-web">{{ t.nav.worksSub['digital-web'] }}</a>
+    <a href="{{ home }}works/?category=campaigns">{{ t.nav.worksSub.campaigns }}</a>
+    <a href="{{ home }}works/?category=ai-video">{{ t.nav.worksSub['ai-video'] }}</a>
+  </div>
+  <a class="mobile-nav__link" href="{{ home }}media-promotion/">{{ t.nav.media }}</a>
+  <a class="mobile-nav__link" href="{{ home }}ai-video/">{{ t.nav.aiVideo }}</a>
+  <a class="mobile-nav__link" href="{{ home }}contact/">{{ t.nav.contact }}</a>
+  <a class="mobile-nav__link mobile-nav__link--dan" href="{{ home }}dan-lebkovitz/">{{ t.nav.dan }}</a>
+  <a class="btn btn-primary" href="{{ home }}contact/" style="margin-block-start: var(--space-md);">{{ t.nav.headerCta }}</a>
+</nav>

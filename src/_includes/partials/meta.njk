@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<meta name="theme-color" content="#0a0a0a">
+{% if noindex %}<meta name="robots" content="noindex, follow">{% endif %}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+{% set canonicalUrl = business.url + page.url %}
+<link rel="canonical" href="{{ canonicalUrl }}">
+<link rel="alternate" hreflang="he" href="{{ business.url }}{{ page.url | altUrl('he') }}">
+<link rel="alternate" hreflang="en" href="{{ business.url }}{{ page.url | altUrl('en') }}">
+<link rel="alternate" hreflang="x-default" href="{{ business.url }}{{ page.url | altUrl('he') }}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ i18n[lang].meta.siteName }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonicalUrl }}">
+<meta property="og:locale" content="{{ 'he_IL' if lang == 'he' else 'en_US' }}">
+<meta property="og:locale:alternate" content="{{ 'en_US' if lang == 'he' else 'he_IL' }}">
+<meta property="og:image" content="{{ ogImage | default(business.url + '/assets/img/og-default.jpg') }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ ogImage | default(business.url + '/assets/img/og-default.jpg') }}">
+
+<link rel="preload" href="/assets/fonts/osh-condensed/OpenSansHebrewCondensed-Light.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/heebo/Heebo-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/main.css?v={{ buildId }}">
+
+{% if schema %}
+<script type="application/ld+json">{{ schema | jsonify | safe }}</script>
+{% endif %}

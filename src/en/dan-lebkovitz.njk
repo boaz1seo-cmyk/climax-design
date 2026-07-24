@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+lang: en
+dir: ltr
+navActive: dan
+permalink: /en/dan-lebkovitz/index.html
+title: "Dan Levkovitch | Caricaturist & Animator, Creator of Alfie"
+description: "In memory of Dan Levkovitch (1927–2002), caricaturist and animator, Holocaust survivor, creator of the character “Alfie.” The inspiration behind Climax Design."
+schema:
+  "@context": "https://schema.org"
+  "@type": "Person"
+  "name": "Dan Levkovitch"
+  "alternateName": "Dan (Lucien) Levkovitch"
+  "birthDate": "1927"
+  "deathDate": "2002-11-08"
+  "jobTitle": "Caricaturist and Animator"
+  "description": "Israeli caricaturist and animator, Holocaust survivor born in Paris, creator of the character \"Alfie\" on Israeli educational television."
+---
+{% import "macros/lead-strip.njk" as leadStripMacro %}
+{% set t = i18n.en %}
+
+<section class="hero hero--page">
+  <div class="hero__inner">
+    <div class="eyebrow" data-animate>A personal tribute</div>
+    <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate><span style="white-space: nowrap">Dan Levkovitch</span></h1>
+    <p class="eyebrow" style="justify-content:center;" data-animate>A pioneer of classic Israeli animation · 1927–2002</p>
+  </div>
+</section>
+
+{{ leadStripMacro.leadStrip("en", business, t, "dan") }}
+
+<section class="room room--charcoal">
+  <div class="container">
+    <div class="prose" style="text-align:center; margin-inline:auto;" data-animate>
+      <p>
+        Danny (Lucien) Levkovitch was born in 1927 in Paris. During the Nazi occupation, his mother hid him in a monastery to save his life, while she herself was taken by the Germans. In 1947, he sailed to Israel aboard the immigrant ship “Ha'Ma'apil Ha'Almoni.”
+      </p>
+      <p>
+        From 1954 to 1961 he published caricatures and illustrations in the newspaper “Kol HaAm.” In 1973 he joined Israeli Educational Television as a graphic designer and animator, where he created one of the most beloved characters among Israeli children, <strong>“Alfie,”</strong> a claymation character who accompanied generations of children and taught them to read and write, out of love.
+      </p>
+      <p>
+        Dani passed away in 2002. His artistic legacy is held at the Israeli Cartoon Museum in Holon. In 2006, his wife Sara published a book in his memory, “Dani Without Secrets: My Land,” a collection of his political caricatures with contemporary commentary.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="room room--light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>Artistic legacy</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>From the archive</h2>
+    </div>
+    <div class="work-grid" data-animate-group>
+      {% for i in range(1, 5) %}
+      <div class="work-card" style="pointer-events:none;" data-animate-item>
+        <div class="work-card__media">
+          <div class="work-placeholder" role="img" aria-label="Archival photo of Dan Levkovitch">
+            <span>Archive</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="room">
+  <div class="container center-col">
+    <span class="eyebrow" data-animate>The inspiration behind Climax</span>
+    <h2 class="display-heading" style="font-size: var(--step-h1); max-width: 44rem; margin-block-start: var(--space-md);" data-animate>Art, passed down a generation</h2>
+    <p class="prose" data-animate>
+      <span style="white-space: nowrap">Boaz Levkovitch</span>, Dani's son and the studio's founder, carries forward the family tradition of craft, precision and a love of art, this time in the world of branding and digital design. The name “Climax” carries that spirit: every project is a chance to create something unforgettable, just as Dani did for generations of Israeli children.
+    </p>
+    <a class="btn btn-ghost" style="margin-block-start: var(--space-md);" href="/en/about/" data-animate>Read more about us <span class="btn-arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>

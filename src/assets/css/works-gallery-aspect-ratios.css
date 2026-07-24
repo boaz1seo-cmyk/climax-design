@@ -1,0 +1,17 @@
+/* =========================================================
+   Works gallery — per-category aspect ratios
+   4:5 portrait for branding-design (bottle/product photography:
+   Cider HaGalil, Tempo Soda, Goldstar), 16:9 landscape for the
+   UI/UX, digital campaigns and AI video categories.
+   Hover caption (project name + category) is handled by the
+   existing .work-card__body / .work-card__cat / .work-card__title
+   rules in components.css — no need to redeclare it here.
+   ========================================================= */
+.work-card[data-category="branding-design"] .work-card__media {
+  aspect-ratio: 4 / 5;
+}
+.work-card[data-category="digital-web"] .work-card__media,
+.work-card[data-category="campaigns"] .work-card__media,
+.work-card[data-category="ai-video"] .work-card__media {
+  aspect-ratio: 16 / 9;
+}

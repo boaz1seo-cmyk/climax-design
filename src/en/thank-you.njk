@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+lang: en
+dir: ltr
+navActive: none
+permalink: /en/thank-you/index.html
+title: "Thank You | Climax Design"
+description: "We've received your message and will get back to you shortly."
+noindex: true
+eleventyExcludeFromCollections: true
+---
+{% set t = i18n.en %}
+
+<section class="room room--white" style="padding-block-start: calc(var(--header-h) + var(--space-2xl)); min-height: 70vh; display: flex; align-items: center;">
+  <div class="container center-col">
+    <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate>Thank you for reaching out! 🙏</h1>
+    <p class="prose" style="font-size: var(--step-body-lg);" data-animate>
+      We've received your message. We'll get back to you within one business day
+    </p>
+    <a class="btn btn-primary" style="margin-block-start: var(--space-lg);" href="/en/" data-animate>
+      Back to homepage <span class="btn-arrow" aria-hidden="true">→</span>
+    </a>
+
+    {% if business.social.instagram or business.whatsapp %}
+    <div style="margin-block-start: var(--space-2xl);" data-animate>
+      <p class="eyebrow" style="justify-content:center; margin-block-end: var(--space-md);">In the meantime, follow us</p>
+      <div style="display:flex; gap: var(--space-md); justify-content:center;">
+        {% if business.social.instagram %}
+        <a href="{{ business.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram של Climax Digital" class="feature__icon">{% instagramIcon 20 %}</a>
+        {% endif %}
+        <a href="https://wa.me/{{ business.whatsapp }}?text={{ t.whatsapp.defaultMessage | urlencode }}" target="_blank" rel="noopener" aria-label="{{ t.whatsapp.aria }}" class="feature__icon">{% whatsappIcon 20 %}</a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>

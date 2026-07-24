@@ -1,0 +1,123 @@
+[
+  {
+    "id": "batei-hadin-branding",
+    "imageSrc": "/assets/works/branding/batei-hadin/brand-guidelines.jpg",
+    "contain": true,
+    "category": "branding-design",
+    "titleHe": "בתי הדין הרבניים: מדריך מיתוג",
+    "titleEn": "Rabbinical Courts: Brand Guidelines",
+    "href": "/works/batei-hadin/"
+  },
+  {
+    "id": "dgenfren-app",
+    "image": "dgenfren-app-splash.jpg",
+    "category": "digital-web",
+    "titleHe": "DgenFren App: עיצוב UI/UX",
+    "titleEn": "DgenFren App: UI/UX Design",
+    "href": "/works/dgen-fren/"
+  },
+  {
+    "id": "goldstar-beer-bottle",
+    "image": "goldstar-beer-bottle.jpg",
+    "category": "branding-design",
+    "titleHe": "עיצוב אריזה: בירת גולדסטאר",
+    "titleEn": "Packaging Design: Goldstar Beer",
+    "featured": true
+  },
+  {
+    "id": "tempo-soda-orange-bottles",
+    "image": "tempo-soda-orange-bottles.jpg",
+    "category": "branding-design",
+    "titleHe": "הסודה של טמפו: תפוזים",
+    "titleEn": "Tempo Soda: Orange",
+    "featured": false
+  },
+  {
+    "id": "cider-hagalil-lineup-1",
+    "image": "cider-hagalil-lineup-1.jpg",
+    "category": "branding-design",
+    "titleHe": "סיידר הגליל: קו מוצרים",
+    "titleEn": "Cider HaGalil: Product Line",
+    "featured": true
+  },
+  {
+    "id": "tempo-soda-green",
+    "image": "tempo-soda-green.jpg",
+    "category": "branding-design",
+    "titleHe": "הסודה של טמפו: גזוז ירוק",
+    "titleEn": "Tempo Soda: Green Spritz",
+    "featured": false
+  },
+  {
+    "id": "cider-hagalil-lineup-2",
+    "image": "cider-hagalil-lineup-2.jpg",
+    "category": "branding-design",
+    "titleHe": "סיידר הגליל: פריסת מוצרים",
+    "titleEn": "Cider HaGalil: Range Layout",
+    "featured": false
+  },
+  {
+    "id": "tempo-soda-orange-single",
+    "image": "tempo-soda-orange-single.jpg",
+    "category": "branding-design",
+    "titleHe": "הסודה של טמפו: תפוזים, בקבוק בודד",
+    "titleEn": "Tempo Soda: Orange, Single Bottle",
+    "featured": false
+  },
+  {
+    "id": "tempo-soda-classic",
+    "image": "tempo-soda-classic.jpg",
+    "category": "branding-design",
+    "titleHe": "הסודה של טמפו: קלאסית",
+    "titleEn": "Tempo Soda: Classic",
+    "featured": false
+  },
+  {
+    "id": "tempo-berdak-trio",
+    "image": "tempo-berdak-trio.jpg",
+    "category": "branding-design",
+    "titleHe": "סודה ברדק: שלושה טעמים",
+    "titleEn": "Tempo Berdak Soda: Three Flavors",
+    "featured": false
+  },
+  {
+    "id": "tempo-berdak-range",
+    "image": "tempo-berdak-range.jpg",
+    "category": "branding-design",
+    "titleHe": "סודה ברדק: קו טעמים מלא",
+    "titleEn": "Tempo Berdak Soda: Full Flavor Range",
+    "featured": false
+  },
+  {
+    "id": "maccabi-beer-tasting-flyer",
+    "image": "maccabi-beer-tasting-flyer.jpg",
+    "category": "campaigns",
+    "titleHe": "קמפיין השקה: בירה מכבי ב-Benny's",
+    "titleEn": "Launch Campaign: Maccabi Beer at Benny's Cafe",
+    "featured": true
+  },
+  {
+    "id": "sanpellegrino-campaign-ad",
+    "image": "sanpellegrino-campaign-ad.jpg",
+    "category": "campaigns",
+    "titleHe": "קמפיין פרסום: סן פלגרינו",
+    "titleEn": "Advertising Campaign: S.Pellegrino",
+    "featured": true
+  },
+  {
+    "id": "tempo-cooldrink-pouch",
+    "image": "tempo-cooldrink-pouch.jpg",
+    "category": "branding-design",
+    "titleHe": "עיצוב אריזה: טמפו קול דרינק",
+    "titleEn": "Packaging Design: Tempo Cool Drink",
+    "featured": false
+  },
+  {
+    "id": "strongbow-rose-promo",
+    "image": "strongbow-rose-promo.jpg",
+    "category": "campaigns",
+    "titleHe": "קמפיין מבצע: סטרונגבו רוזה",
+    "titleEn": "Promotional Campaign: Strongbow Rosé",
+    "featured": false
+  }
+]

@@ -1,0 +1,57 @@
+{% import "macros/custom-icons.njk" as icons %}
+{% import "macros/logo.njk" as logoMacro %}
+{% set t = i18n[lang] %}
+{% set home = '/' if lang == 'he' else '/en/' %}
+{% set addr = business.address[lang] %}
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <a class="logo" href="{{ home }}" aria-label="Climax Design — {{ home }}">
+        {{ logoMacro.climaxLogo('light', 'logo__img') }}
+      </a>
+      <p style="color:var(--c-dim-on-dark); margin-block-start: var(--space-sm); font-size: var(--step-small);">{{ t.footer.tagline }}</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>{{ t.footer.sitemap }}</h3>
+      <ul>
+        <li><a href="{{ home }}about/">{{ t.nav.about }}</a></li>
+        <li><a href="{{ home }}works/">{{ t.nav.works }}</a></li>
+        <li><a href="{{ home }}media-promotion/">{{ t.nav.media }}</a></li>
+        <li><a href="{{ home }}ai-video/">{{ t.nav.aiVideo }}</a></li>
+        <li><a href="{{ home }}dan-lebkovitz/">{{ t.nav.dan }}</a></li>
+        <li><a href="{{ home }}contact/">{{ t.nav.contact }}</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>{{ t.footer.contactUs }}</h3>
+      <ul>
+        <li><a href="tel:{{ business.phoneE164 }}" class="footer-contact-item ltr-embed">{{ icons.phoneIcon() }}{{ business.phoneDisplay }}</a></li>
+        <li><a href="mailto:{{ business.email }}" class="footer-contact-item ltr-embed">{{ icons.mailIcon() }}{{ business.email }}</a></li>
+        <li><span class="footer-contact-item">{{ icons.mapPinIcon() }}{{ addr.street }}, {{ addr.city }}</span></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>{{ t.footer.followUs }}</h3>
+      <div class="footer-social-icons">
+        {% if business.social.instagram %}<a href="{{ business.social.instagram }}" target="_blank" rel="noopener" aria-label="{{ 'Instagram של Climax Digital' if lang == 'he' else 'Instagram of Climax Design' }}">{% instagramIcon 24 %}</a>{% endif %}
+        {% if business.social.facebook %}<a href="{{ business.social.facebook }}" target="_blank" rel="noopener" aria-label="{{ 'פייסבוק של Climax Design' if lang == 'he' else 'Facebook of Climax Design' }}">{% facebookIcon 24 %}</a>{% endif %}
+        {% if business.social.tiktok %}<a href="{{ business.social.tiktok }}" target="_blank" rel="noopener" aria-label="{{ 'טיקטוק של Climax Design' if lang == 'he' else 'TikTok of Climax Design' }}">{% tiktokIcon 24 %}</a>{% endif %}
+      </div>
+      {% if business.social.linkedin or business.social.behance %}
+      <ul>
+        {% if business.social.linkedin %}<li><a href="{{ business.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>{% endif %}
+        {% if business.social.behance %}<li><a href="{{ business.social.behance }}" target="_blank" rel="noopener">Behance</a></li>{% endif %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; {% year %} {{ business.name }}. {{ t.footer.rights }}.</span>
+    <a href="{{ home }}accessibility/">{{ t.footer.accessibility }}</a>
+  </div>
+  <p class="footer-dedication">{{ t.footer.dedication | safe }}</p>
+</footer>

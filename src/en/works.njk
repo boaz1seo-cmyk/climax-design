@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+lang: en
+dir: ltr
+navActive: works
+permalink: /en/works/index.html
+title: "Selected Work | Branding, UI, Graphic & Web Design — Climax Design"
+description: "A selected portfolio from Climax Design: branding, UI design, graphic design and web design projects for tech, food, hospitality and event clients."
+---
+{% import "macros/work-card.njk" as cards %}
+{% import "macros/lead-strip.njk" as leadStripMacro %}
+{% set t = i18n.en %}
+
+<section class="hero hero--page">
+  <div class="hero__inner">
+    <div class="eyebrow" data-animate>Portfolio</div>
+    <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate>Selected branding &amp; design work</h1>
+    <p class="prose" data-animate>Branding, UI design, graphic design and web design — a selection of our projects over the years.</p>
+  </div>
+</section>
+
+{{ leadStripMacro.leadStrip("en", business, t, "works") }}
+
+<section class="room room--light">
+  <div class="container">
+    <div class="filter-bar" data-filter-bar role="group" aria-label="Filter work by category">
+      <button class="filter-btn" type="button" data-category="all" aria-pressed="true">{{ t.categories.all }}</button>
+      <button class="filter-btn" type="button" data-category="branding-design" aria-pressed="false">{{ t.categories['branding-design'] }}</button>
+      <button class="filter-btn" type="button" data-category="digital-web" aria-pressed="false">{{ t.categories['digital-web'] }}</button>
+      <button class="filter-btn" type="button" data-category="campaigns" aria-pressed="false">{{ t.categories.campaigns }}</button>
+      <button class="filter-btn" type="button" data-category="ai-video" aria-pressed="false">{{ t.categories['ai-video'] }}</button>
+    </div>
+
+    <div class="work-grid" data-work-grid data-animate-group>
+      {% for work in works %}{{ cards.workCard(work, "en", t, "/en/") }}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="room room--white">
+  <div class="container center-col">
+    <h2 class="display-heading" style="font-size: var(--step-h1); max-width: 40rem;" data-animate>{{ t.cta.letsTalk }}</h2>
+    <a class="btn btn-primary" style="margin-block-start: var(--space-lg);" href="/en/contact/" data-animate>{{ t.cta.contactButton }} <span class="btn-arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>

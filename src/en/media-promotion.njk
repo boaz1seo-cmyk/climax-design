@@ -1,0 +1,121 @@
+---
+layout: layouts/base.njk
+lang: en
+dir: ltr
+navActive: media
+permalink: /en/media-promotion/index.html
+title: "Paid Media: Facebook, Instagram & Google Ads | Climax Design"
+description: "Paid advertising on Facebook, Instagram and Google: media strategy, conversion funnels, converting creative, and full social media management. Boutique agency, Ramat Gan."
+schema:
+  "@context": "https://schema.org"
+  "@type": "Service"
+  "serviceType": "Paid Digital Media Advertising"
+  "name": "Paid Media: Facebook, Instagram & Google"
+  "provider":
+    "@type": "ProfessionalService"
+    "name": "Climax Design"
+    "url": "https://climax-design.co.il/en/"
+  "areaServed": "IL"
+  "url": "https://climax-design.co.il/en/media-promotion/"
+---
+{% import "macros/custom-icons.njk" as icons %}
+{% import "macros/lead-strip.njk" as leadStripMacro %}
+{% set t = i18n.en %}
+
+<section class="hero hero--page">
+  <div class="hero__inner">
+    <div class="eyebrow" data-animate>Media advertising</div>
+    <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate>Paid media on Facebook, Instagram &amp; Google</h1>
+    <p class="prose" style="font-size: var(--step-body-lg);" data-animate>
+      End-to-end paid campaign management: media strategy and conversion funnels, precise audience targeting and remarketing, platform-specific creative, copy that converts, systematic A/B testing, ongoing optimization and transparent performance reporting.
+    </p>
+    <a class="btn btn-primary" href="/en/contact/" data-animate>{{ t.cta.contactButton }} <span class="btn-arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+{{ leadStripMacro.leadStrip("en", business, t, "media") }}
+
+<section class="room room--light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>Facebook &amp; Instagram</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>Paid advertising that speaks to the right audience</h2>
+    </div>
+    <div class="feature-grid feature-grid--3" data-animate-group>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.funnelIcon() }}</span>
+        <h3 class="feature__title">Media strategy &amp; funnels</h3>
+        <p class="feature__body">We build a complete customer journey, from first exposure to conversion — not just a single campaign.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.audienceIcon() }}</span>
+        <h3 class="feature__title">Audience targeting &amp; remarketing</h3>
+        <p class="feature__body">Precise targeting of relevant audiences, and re-engaging people who already showed interest.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.platformCreativeIcon() }}</span>
+        <h3 class="feature__title">Platform-specific creative</h3>
+        <p class="feature__body">Design and video tailored to each network's language and format — not one banner for everyone.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.copyIcon() }}</span>
+        <h3 class="feature__title">Copy that converts</h3>
+        <p class="feature__body">Marketing copy that speaks your customer's language and drives action.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.abTestIcon() }}</span>
+        <h3 class="feature__title">Systematic A/B testing</h3>
+        <p class="feature__body">Continuous testing of creative, audiences and offers — decisions based on data, not guesswork.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.reportsIcon() }}</span>
+        <h3 class="feature__title">Transparent reporting</h3>
+        <p class="feature__body">Ongoing optimization and clear reporting, so you always know where your budget stands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="room">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>Google</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>Google advertising that delivers results</h2>
+      <p class="prose" data-animate>Search, Shopping, Display and YouTube campaigns — focused on results and cost-per-conversion.</p>
+    </div>
+    <div class="feature-grid feature-grid--3" data-animate-group>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.searchIcon() }}</span>
+        <h3 class="feature__title">Search</h3>
+        <p class="feature__body">Show up exactly when potential customers are searching for you.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.shoppingIcon() }}</span>
+        <h3 class="feature__title">Shopping</h3>
+        <p class="feature__body">Display products directly in search results for online stores.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.networkIcon() }}</span>
+        <h3 class="feature__title">Display network &amp; YouTube</h3>
+        <p class="feature__body">Build exposure and brand awareness across websites and videos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="room room--light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>Social media</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>Full digital presence management</h2>
+      <p class="prose" data-animate>Content strategy, concepts and monthly content calendars, post and story design, copywriting, and community management — a consistent presence that builds your brand and generates inquiries.</p>
+    </div>
+  </div>
+</section>
+
+<section class="room room--white">
+  <div class="container center-col">
+    <h2 class="display-heading" style="font-size: var(--step-h1); max-width: 40rem;" data-animate>Ready to grow your paid media activity?</h2>
+    <a class="btn btn-primary" style="margin-block-start: var(--space-lg);" href="/en/contact/" data-animate>{{ t.cta.contactButton }} <span class="btn-arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>

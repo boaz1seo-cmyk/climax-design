@@ -1,0 +1,96 @@
+---
+layout: layouts/base.njk
+lang: en
+dir: ltr
+navActive: aiVideo
+permalink: /en/ai-video/index.html
+title: "AI Video Creation & Video Editing | Climax Design"
+description: "Advanced AI-generated video, brand films and commercials, reels and short-form content, video editing and motion graphics, from script to final cut. Boutique agency, Ramat Gan."
+schema:
+  "@context": "https://schema.org"
+  "@type": "Service"
+  "serviceType": "AI Video Creation & Video Editing"
+  "name": "AI Video"
+  "provider":
+    "@type": "ProfessionalService"
+    "name": "Climax Design"
+    "url": "https://climax-design.co.il/en/"
+  "areaServed": "IL"
+  "url": "https://climax-design.co.il/en/ai-video/"
+---
+{% import "partials/video-gallery.njk" as gallery %}
+{% import "macros/custom-icons.njk" as icons %}
+{% import "macros/lead-strip.njk" as leadStripMacro %}
+{% set t = i18n.en %}
+
+<section class="hero hero--page">
+  <div class="hero__inner">
+    <div class="eyebrow" data-animate>AI Video</div>
+    <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate>AI video creation &amp; video editing</h1>
+    <p class="prose" style="font-size: var(--step-body-lg);" data-animate>
+      The new frontier of creative work: advanced AI-generated video, brand films and commercials, reels and short-form social content, video editing, motion graphics and animation, from script to final cut. Smart AI tools that shorten timelines and lower production costs, without compromising on creative quality.
+    </p>
+    <a class="btn btn-primary" href="/en/contact/" data-animate>{{ t.cta.contactButton }} <span class="btn-arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+{{ leadStripMacro.leadStrip("en", business, t, "ai-video") }}
+
+<section class="room room--light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>What we create</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>From script to final cut</h2>
+    </div>
+    <div class="feature-grid feature-grid--3" data-animate-group>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.aiSparkIcon() }}</span>
+        <h3 class="feature__title">Advanced AI video</h3>
+        <p class="feature__body">Innovative visual content created with cutting-edge AI tools.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.filmIcon() }}</span>
+        <h3 class="feature__title">Brand films &amp; commercials</h3>
+        <p class="feature__body">Your brand's story told through professional, persuasive video.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.reelsIcon() }}</span>
+        <h3 class="feature__title">Reels &amp; short-form content</h3>
+        <p class="feature__body">Short, engaging content built specifically for social media.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.editingIcon() }}</span>
+        <h3 class="feature__title">Video editing</h3>
+        <p class="feature__body">Precise editing that tells a story and keeps a natural rhythm and flow.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.motionIcon() }}</span>
+        <h3 class="feature__title">Motion graphics &amp; animation</h3>
+        <p class="feature__body">Moving graphics that add depth, clarity and character to every video.</p>
+      </div>
+      <div class="feature" data-animate-item>
+        <span class="feature__icon">{{ icons.aiToolsIcon() }}</span>
+        <h3 class="feature__title">Smart AI tools</h3>
+        <p class="feature__body">Shorter timelines and lower production costs, without compromising creative quality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="room">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>Showreel</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>Selected video work</h2>
+    </div>
+
+    {{ gallery.videoGallery("en") }}
+  </div>
+</section>
+
+<section class="room room--white">
+  <div class="container center-col">
+    <h2 class="display-heading" style="font-size: var(--step-h1); max-width: 40rem;" data-animate>Have an idea for your next video?</h2>
+    <a class="btn btn-primary" style="margin-block-start: var(--space-lg);" href="/en/contact/" data-animate>{{ t.cta.contactButton }} <span class="btn-arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>

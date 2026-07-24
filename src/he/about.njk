@@ -1,0 +1,53 @@
+---
+layout: layouts/base.njk
+lang: he
+dir: rtl
+navActive: about
+permalink: /about/index.html
+title: "עלינו | Climax Design — סוכנות בוטיק למיתוג ועיצוב ברמת גן"
+description: "סוכנות בוטיק במתחם הבורסה, רמת גן. בראש הסטודיו: בועז לבקוביץ', בוגר בצלאל עם מעל 20 שנות ניסיון בקריאייטיב ומיתוג, ממשיך דרכו של דני לבקוביץ' ז״ל."
+---
+{% import "macros/lead-strip.njk" as leadStripMacro %}
+{% set t = i18n.he %}
+
+<section class="hero hero--page">
+  <div class="hero__inner">
+    <div class="eyebrow" data-animate>עלינו</div>
+    <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate>אנחנו לא עוד סוכנות.<br>אנחנו המקום שבו רעיון הופך למותג שאי אפשר לשכוח.</h1>
+    <p class="prose" style="font-size: var(--step-body-lg);" data-animate>
+      קריאייטיב, מיתוג ופרסום תחת קורת גג אחת, עם תשומת לב שרק בוטיק יכול לתת. <strong><span style="white-space: nowrap">בועז לבקוביץ'</span></strong>, בוגר בצלאל עם 20 שנות ניסיון, מוביל כל פרויקט מהרעיון למוצר שהוא חי, נושם וגם מוכר. וממשיך דרכו של האנימטור והקריקטוריסט <a href="/dan-lebkovitz/" style="text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px;"><span style="white-space: nowrap">דני לבקוביץ' ז"ל</span></a>, יוצר ״אלפי״.
+    </p>
+  </div>
+</section>
+
+{{ leadStripMacro.leadStrip("he", business, t, "about") }}
+
+<section class="room room--light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>הגישה שלנו</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>למה בוטיק?</h2>
+    </div>
+    <p class="prose" style="text-align:center; margin-inline:auto;" data-animate>
+      כי גודל זה יתרון כשהוא קטן. אצלנו אין ״עוד תיק לקוח״: כל מותג מקבל צוות שמכיר אותו לעומק, זמינות אמיתית של מקבלי ההחלטות, וירידה לפרטים הקטנים ביותר: הפיקסל, המילה, השנייה הראשונה של הסרטון.
+    </p>
+  </div>
+</section>
+
+<section class="room room--charcoal">
+  <div class="container center-col">
+    <span class="eyebrow" data-animate>ההשראה מאחורי Climax</span>
+    <h2 class="display-heading" style="font-size: var(--step-h1); max-width: 44rem; margin-block-start: var(--space-md);" data-animate>האמנות עוברת מדור לדור</h2>
+    <p class="prose" data-animate>
+      השם ״קליימקס״ לא נולד בריק. הוא ממשיך מסורת של יצירה, דיוק ואהבת אמנות שהתחילה עוד לפני שנולדתי, אצל אבי, <span style="white-space: nowrap">דני לבקוביץ' ז"ל</span>, קריקטוריסט ואנימטור שיצר את ״אלפי״.
+    </p>
+    <a class="btn btn-ghost" style="margin-block-start: var(--space-md);" href="/dan-lebkovitz/" data-animate>קראו את הסיפור המלא <span class="btn-arrow" aria-hidden="true">←</span></a>
+  </div>
+</section>
+
+<section class="room room--pale">
+  <div class="container center-col">
+    <h2 class="display-heading" style="font-size: var(--step-h1); max-width: 40rem;" data-animate>{{ t.cta.letsTalk }}</h2>
+    <a class="btn btn-primary" style="margin-block-start: var(--space-lg);" href="/contact/" data-animate>{{ t.cta.contactButton }} <span class="btn-arrow" aria-hidden="true">←</span></a>
+  </div>
+</section>

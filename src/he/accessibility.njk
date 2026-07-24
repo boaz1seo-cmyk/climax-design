@@ -1,0 +1,57 @@
+---
+layout: layouts/base.njk
+lang: he
+dir: rtl
+navActive: none
+permalink: /accessibility/index.html
+title: "הצהרת נגישות | Climax Design"
+description: "הצהרת הנגישות של אתר Climax Design, בהתאם לתקן הישראלי ת״י 5568 ולהנחיות WCAG 2.0 רמה AA."
+---
+{% set t = i18n.he %}
+{% set a11y = business.accessibility %}
+
+<section class="hero hero--page">
+  <div class="hero__inner">
+    <div class="eyebrow" data-animate>נגישות</div>
+    <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate>הצהרת נגישות</h1>
+  </div>
+</section>
+
+<section class="room room--light">
+  <div class="container">
+    <div class="prose" data-animate>
+      <p>
+        אתר Climax Design פועל לשיפור מתמיד של נגישות האתר לאנשים עם מוגבלות, מתוך אמונה כי לכל אדם מגיעה הזכות לגלוש באינטרנט בכבוד, בעצמאות ובשוויון. האתר תוכנן ונבנה תוך התייחסות להנחיות התאמות הנגישות לפי <strong>תקן ישראלי ת"י 5568</strong> (המבוסס על הנחיות WCAG 2.0 הבינלאומיות) ברמת AA.
+      </p>
+
+      <h2 style="font-family: var(--font-body); font-size: var(--step-h2); color: var(--text); margin-block-start: var(--space-lg);">התאמות הנגישות שבוצעו באתר</h2>
+      <ul style="display:flex; flex-direction:column; gap: var(--space-xs); padding-inline-start: 1.5rem; list-style: disc;">
+        <li>ניווט מלא באמצעות מקלדת, כולל קישור ״דילוג לתוכן הראשי״.</li>
+        <li>תמיכה בקוראי מסך: תיוג ARIA, טקסט חלופי לתמונות, וסימון שפה נכון (עברית/אנגלית) בכל עמוד.</li>
+        <li>ניגודיות צבעים העומדת בדרישות רמה AA בין טקסט לרקע.</li>
+        <li>מבנה כותרות היררכי (H1–H3) בכל עמוד.</li>
+        <li>אפשרות התאמה לתנועה מופחתת (prefers-reduced-motion) עבור משתמשים רגישים לאנימציה.</li>
+        <li>טפסים עם תוויות ברורות, הודעות שגיאה מפורטות והכוונה לתיקון.</li>
+      </ul>
+
+      <h2 style="font-family: var(--font-body); font-size: var(--step-h2); color: var(--text); margin-block-start: var(--space-lg);">מגבלות ידועות</h2>
+      <p>
+        אנו ממשיכים לעבוד על שיפור הנגישות באתר על בסיס שוטף. ייתכן שחלקים מסוימים באתר, כגון תוכן וידאו מוטמע מצדדים שלישיים (יוטיוב/וימאו), אינם נגישים במלואם. אנו פועלים לצמצם פערים אלו ככל האפשר.
+      </p>
+
+      <h2 style="font-family: var(--font-body); font-size: var(--step-h2); color: var(--text); margin-block-start: var(--space-lg);">פנייה בנושא נגישות</h2>
+      <p>
+        נתקלתם בבעיית נגישות באתר? נשמח שתפנו אלינו ונטפל בפנייתכם בהקדם.
+      </p>
+      <ul style="display:flex; flex-direction:column; gap: var(--space-xs); padding-inline-start: 1.5rem; list-style: disc;">
+        <li>רכז/ת נגישות: {{ a11y.coordinatorName | default("יעודכן בקרוב", true) }}</li>
+        <li>אימייל: {% if a11y.coordinatorEmail %}<a href="mailto:{{ a11y.coordinatorEmail }}" class="ltr-embed">{{ a11y.coordinatorEmail }}</a>{% else %}<a href="mailto:{{ business.email }}" class="ltr-embed">{{ business.email }}</a>{% endif %}</li>
+        <li>טלפון: {% if a11y.coordinatorPhone %}<span class="ltr-embed">{{ a11y.coordinatorPhone }}</span>{% else %}<a href="tel:{{ business.phoneE164 }}" class="ltr-embed">{{ business.phoneDisplay }}</a>{% endif %}</li>
+      </ul>
+
+      <p style="color: var(--text-dim); font-size: var(--step-small); margin-block-start: var(--space-lg);">
+        הצהרה זו עודכנה לאחרונה ב{{ a11y.statementDate | default("יולי 2026", true) }}.
+      </p>
+    </div>
+  </div>
+</section>

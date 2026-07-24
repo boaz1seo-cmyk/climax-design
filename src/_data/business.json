@@ -1,0 +1,50 @@
+{
+  "name": "Climax Design",
+  "nameHe": "קליימקס דיזיין",
+  "founder": "בועז לבקוביץ'",
+  "founderEn": "Boaz Levkovitch",
+  "domain": "climax-design.co.il",
+  "url": "https://climax-design.co.il",
+  "email": "boaz@climax-design.co.il",
+  "phoneDisplay": "052-290-8725",
+  "phoneE164": "+972522908725",
+  "whatsapp": "972522908725",
+  "address": {
+    "he": {
+      "street": "ז'בוטינסקי 33, מגדלי התאומים, מתחם הבורסה",
+      "city": "רמת גן",
+      "postalCode": "",
+      "country": "ישראל"
+    },
+    "en": {
+      "street": "33 Jabotinsky St., Twin Towers, Bursa Complex",
+      "city": "Ramat Gan",
+      "postalCode": "",
+      "country": "Israel"
+    }
+  },
+  "geo": {
+    "latitude": 32.0824,
+    "longitude": 34.8115
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/climax.digital/",
+    "facebook": "https://www.facebook.com/climaxdesignagency",
+    "tiktok": "https://www.tiktok.com/@boaz1984",
+    "linkedin": "",
+    "behance": ""
+  },
+  "analytics": {
+    "ga4Id": "",
+    "metaPixelId": ""
+  },
+  "accessibility": {
+    "coordinatorName": "",
+    "coordinatorEmail": "",
+    "coordinatorPhone": "",
+    "statementDate": ""
+  },
+  "web3forms": {
+    "accessKey": "f109ba2e-04b7-4481-a5af-37c0735520e5"
+  }
+}

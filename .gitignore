@@ -1,0 +1,6 @@
+node_modules/
+.tools/
+_site/
+assets/videos/
+.DS_Store
+.claude/settings.local.json

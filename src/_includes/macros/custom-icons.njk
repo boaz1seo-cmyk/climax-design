@@ -1,0 +1,292 @@
+{# Custom hand-drawn icon system: thin black/white line + one red accent detail.
+   Each icon: .icon-draw__line elements draw themselves in on scroll,
+   then .icon-draw__accent fades/scales in last. #}
+
+{% macro strategyIcon() %}
+<svg class="icon-draw" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
+  <path class="icon-draw__line" d="M3 27 L9 19 L14 23 L20 11 L25 15 L25 6" />
+  <polygon class="icon-draw__accent" points="25,6 31,8.5 25,11" />
+</svg>
+{% endmacro %}
+
+{% macro paidMediaIcon() %}
+<svg class="icon-draw" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
+  <path class="icon-draw__line" d="M4 12 L4 20 L20 26 L20 6 Z" />
+  <path class="icon-draw__accent-line" d="M23 9 L28 6" />
+  <path class="icon-draw__accent-line" d="M24 16 L30 16" />
+  <path class="icon-draw__accent-line" d="M23 23 L28 26" />
+</svg>
+{% endmacro %}
+
+{% macro videoIcon() %}
+<svg class="icon-draw" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
+  <rect class="icon-draw__line" x="4" y="6" width="24" height="20" rx="4" />
+  <polygon class="icon-draw__accent" points="13,12 13,20 21,16" />
+</svg>
+{% endmacro %}
+
+{# ============================================================
+   Style-direction exploration — "Strategy" in three aesthetics.
+   Shown side by side on /icon-test/ for the client to pick one.
+   ============================================================ #}
+
+{# A — "One continuous line": a single unbroken flowing stroke —
+   an ascending journey that ties one small knot (the plan) and
+   keeps rising. Red: a small dot at the line's end, a signature. #}
+{% macro strategyLineArt() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <path class="icon-draw__line"
+    d="M5 40 C 12 41.5, 17.5 37.5, 20.8 32.2
+       C 23.2 28.2, 23 24.2, 20.4 24.6
+       C 17.4 25.1, 17.2 29.2, 20.4 29.8
+       C 24.4 30.6, 27.6 26.2, 29.8 21.4
+       C 31.8 17, 35 12.4, 39.6 9.8" />
+  <circle class="icon-draw__accent" cx="41.6" cy="8.8" r="2" />
+</svg>
+{% endmacro %}
+
+{# B — "Noble geometry": hairline concentric circles + cardinal
+   ticks, luxury-maison symmetry. Red: one thin diagonal —
+   the chosen direction cutting through the compass. #}
+{% macro strategyGeometric() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <circle class="icon-draw__line" cx="24" cy="24" r="19" />
+  <circle class="icon-draw__line" cx="24" cy="24" r="13" />
+  <path class="icon-draw__line" d="M24 2 L24 8" />
+  <path class="icon-draw__line" d="M24 40 L24 46" />
+  <path class="icon-draw__line" d="M2 24 L8 24" />
+  <path class="icon-draw__line" d="M40 24 L46 24" />
+  <circle class="icon-draw__line" cx="24" cy="24" r="2.2" />
+  <path class="icon-draw__accent-line" d="M13.5 34.5 L34.5 13.5" />
+</svg>
+{% endmacro %}
+
+{# C — "Free sketch": a confident hand — mountain drawn with a
+   living, wavering line, a thinner climbing route, and one loose
+   red brushstroke flying off the summit. #}
+{% macro strategySketch() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <path class="icon-draw__line"
+    d="M5 41 C 9.6 34.4, 13.8 25.4, 18.2 17.4
+       C 19.7 14.6, 21.4 13.8, 22.8 16.2
+       C 26.4 22.4, 30.4 30.2, 34.8 35.6
+       C 37.3 38.6, 40.4 40.3, 44 40.6" />
+  <path class="icon-draw__line"
+    d="M10.5 40 C 15.2 36.4, 15.6 31.2, 18.2 27.6
+       C 20.2 24.8, 20.9 21.2, 21 18.6" />
+  <path class="icon-draw__accent-line"
+    d="M22.8 14.4 C 25.2 11.6, 28 11, 30.4 12.6" />
+</svg>
+{% endmacro %}
+
+{# ============================================================
+   Approved direction: "Noble Geometry" — full homepage service set.
+   Hairline shapes, quiet symmetry, one red detail per icon that
+   always appears last.
+   ============================================================ #}
+
+{# Branding & Brand Strategy — the approved compass/target mark #}
+{% macro brandStrategyIcon() %}
+{{ strategyGeometric() }}
+{% endmacro %}
+
+{# Graphic & Digital Design — layout grid (square) inside a canvas
+   (circle), one red diagonal as the designer's guide line #}
+{% macro graphicDigitalIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <circle class="icon-draw__line" cx="24" cy="24" r="15" />
+  <rect class="icon-draw__line" x="14" y="14" width="20" height="20" />
+  <path class="icon-draw__accent-line" d="M14 34 L34 14" />
+</svg>
+{% endmacro %}
+
+{# Paid Media & Social — signal reaching outward from a source,
+   the farthest ring is the red detail #}
+{% macro paidSocialIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <path class="icon-draw__line" d="M20 36 A 8 8 0 0 0 12 28" />
+  <path class="icon-draw__line" d="M28 36 A 16 16 0 0 0 12 20" />
+  <path class="icon-draw__accent-line" d="M36 36 A 24 24 0 0 0 12 12" />
+  <circle class="icon-draw__accent" cx="12" cy="36" r="2.2" />
+</svg>
+{% endmacro %}
+
+{# AI, Video & Content — a play mark inscribed in a circle, one
+   red tick like a recording indicator #}
+{% macro aiVideoIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <circle class="icon-draw__line" cx="24" cy="24" r="16" />
+  <path class="icon-draw__line" d="M19 16 L19 32 L33 24 Z" />
+  <path class="icon-draw__accent-line" d="M24 3 L24 8" />
+</svg>
+{% endmacro %}
+
+{# ============================================================
+   Media Promotion page — 9 icons
+   ============================================================ #}
+
+{% macro funnelIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <path class="icon-draw__line" d="M6 10 L42 10 L27 26 L27 38 L21 34 L21 26 Z" />
+  <circle class="icon-draw__accent" cx="24" cy="42" r="2.2" />
+</svg>
+{% endmacro %}
+
+{% macro audienceIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <circle class="icon-draw__line" cx="19" cy="24" r="12" />
+  <circle class="icon-draw__line" cx="29" cy="24" r="12" />
+  <circle class="icon-draw__accent" cx="24" cy="24" r="2.4" />
+</svg>
+{% endmacro %}
+
+{% macro platformCreativeIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <rect class="icon-draw__line" x="6" y="8" width="24" height="16" />
+  <rect class="icon-draw__line" x="16" y="20" width="26" height="20" />
+  <path class="icon-draw__accent-line" d="M16 20 L16 24 L20 24" />
+</svg>
+{% endmacro %}
+
+{% macro copyIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <path class="icon-draw__line" d="M8 14 L40 14" />
+  <path class="icon-draw__line" d="M8 24 L40 24" />
+  <path class="icon-draw__line" d="M8 34 L24 34" />
+  <path class="icon-draw__accent-line" style="stroke-width:2.4" d="M8 39 L24 39" />
+</svg>
+{% endmacro %}
+
+{% macro abTestIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <rect class="icon-draw__line" x="6" y="10" width="36" height="28" />
+  <path class="icon-draw__line" d="M24 10 L24 38" />
+  <path class="icon-draw__accent-line" d="M29 24 L33 28 L39 20" />
+</svg>
+{% endmacro %}
+
+{% macro reportsIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <path class="icon-draw__line" d="M6 40 L42 40" />
+  <path class="icon-draw__line" d="M13 40 L13 28" />
+  <path class="icon-draw__line" d="M24 40 L24 20" />
+  <path class="icon-draw__accent-line" style="stroke-width:2.4" d="M35 40 L35 10" />
+</svg>
+{% endmacro %}
+
+{% macro searchIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <circle class="icon-draw__line" cx="21" cy="21" r="13" />
+  <path class="icon-draw__line" d="M30.2 30.2 L41 41" />
+  <circle class="icon-draw__accent" cx="21" cy="21" r="2.2" />
+</svg>
+{% endmacro %}
+
+{% macro shoppingIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <path class="icon-draw__line" d="M10 16 L38 16 L36 40 L12 40 Z" />
+  <path class="icon-draw__line" d="M17 16 C17 9 19 6 24 6 C29 6 31 9 31 16" />
+  <circle class="icon-draw__accent" cx="24" cy="27" r="2.4" />
+</svg>
+{% endmacro %}
+
+{% macro networkIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <circle class="icon-draw__line" cx="10" cy="14" r="5" />
+  <circle class="icon-draw__line" cx="10" cy="34" r="5" />
+  <path class="icon-draw__line" d="M15 14 L33 24" />
+  <path class="icon-draw__line" d="M15 34 L33 24" />
+  <circle class="icon-draw__accent" cx="36" cy="24" r="5.5" />
+</svg>
+{% endmacro %}
+
+{# ============================================================
+   AI Video page — 6 icons
+   ============================================================ #}
+
+{% macro aiSparkIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <path class="icon-draw__line" d="M24 8 L24 18" />
+  <path class="icon-draw__line" d="M24 30 L24 40" />
+  <path class="icon-draw__line" d="M8 24 L18 24" />
+  <path class="icon-draw__line" d="M30 24 L40 24" />
+  <circle class="icon-draw__line" cx="24" cy="24" r="6" />
+  <path class="icon-draw__accent-line" style="stroke-width:2" d="M33.5 14.5 L37 11" />
+</svg>
+{% endmacro %}
+
+{% macro filmIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <rect class="icon-draw__line" x="6" y="10" width="36" height="28" rx="2" />
+  <path class="icon-draw__line" d="M6 18 L14 18" />
+  <path class="icon-draw__line" d="M6 30 L14 30" />
+  <path class="icon-draw__line" d="M34 18 L42 18" />
+  <path class="icon-draw__line" d="M34 30 L42 30" />
+  <rect class="icon-draw__accent" x="19" y="18" width="10" height="12" />
+</svg>
+{% endmacro %}
+
+{% macro reelsIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <rect class="icon-draw__line" x="14" y="5" width="20" height="38" rx="4" />
+  <path class="icon-draw__line" d="M21 18 L21 30 L31 24 Z" />
+  <circle class="icon-draw__accent" cx="24" cy="10.5" r="1.6" />
+</svg>
+{% endmacro %}
+
+{% macro editingIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <path class="icon-draw__line" d="M6 24 L42 24" />
+  <path class="icon-draw__line" d="M14 18 L14 30" />
+  <path class="icon-draw__line" d="M34 18 L34 30" />
+  <path class="icon-draw__accent-line" style="stroke-width:2.4" d="M24 15 L24 33" />
+</svg>
+{% endmacro %}
+
+{% macro motionIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <rect class="icon-draw__line" x="6" y="14" width="16" height="16" />
+  <circle class="icon-draw__line" cx="32" cy="30" r="8" />
+  <path class="icon-draw__accent-line" d="M22 18 A 14 14 0 0 1 32 22" />
+</svg>
+{% endmacro %}
+
+{% macro aiToolsIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <circle class="icon-draw__line" cx="12" cy="12" r="4" />
+  <circle class="icon-draw__line" cx="36" cy="12" r="4" />
+  <circle class="icon-draw__line" cx="12" cy="36" r="4" />
+  <circle class="icon-draw__line" cx="36" cy="36" r="4" />
+  <path class="icon-draw__line" d="M15.5 14 L21 20" />
+  <path class="icon-draw__line" d="M32.5 14 L27 20" />
+  <path class="icon-draw__line" d="M15.5 34 L21 28" />
+  <path class="icon-draw__line" d="M32.5 34 L27 28" />
+  <circle class="icon-draw__accent" cx="24" cy="24" r="5" />
+</svg>
+{% endmacro %}
+
+{# ============================================================
+   Contact details — phone / mail / map pin
+   ============================================================ #}
+
+{% macro phoneIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <path class="icon-draw__line" d="M14 8 C14 8 20 9 21 15 C21.6 18.5 18 19 18 22 C18 27 21 30 26 30 C29 30 28.5 26.4 32 27 C38 28 39 34 39 34 C39 39 35 41 31 41 C18 41 7 30 7 17 C7 13 9 8 14 8 Z" />
+  <circle class="icon-draw__accent" cx="33" cy="12" r="2.4" />
+</svg>
+{% endmacro %}
+
+{% macro mailIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <rect class="icon-draw__line" x="6" y="11" width="36" height="26" rx="2" />
+  <path class="icon-draw__line" d="M6 13 L24 27 L42 13" />
+  <circle class="icon-draw__accent" cx="24" cy="27" r="2.2" />
+</svg>
+{% endmacro %}
+
+{% macro mapPinIcon() %}
+<svg class="icon-draw" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false" data-draw-duration="1.2">
+  <path class="icon-draw__line" d="M24 44 C24 44 10 29 10 18 C10 10.3 16.3 4 24 4 C31.7 4 38 10.3 38 18 C38 29 24 44 24 44 Z" />
+  <circle class="icon-draw__accent" cx="24" cy="18" r="4.5" />
+</svg>
+{% endmacro %}

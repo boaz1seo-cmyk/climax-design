@@ -1,0 +1,48 @@
+/* Heebo — variable weight, Hebrew + Latin body/UI font */
+@font-face {
+  font-family: "Heebo";
+  src: url("/assets/fonts/heebo/Heebo-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Open Sans — variable weight/width, Latin body font (mixed EN/HE content) */
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/open-sans/OpenSans-Variable.woff2") format("woff2-variations");
+  font-weight: 300 800;
+  font-stretch: 75% 100%;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Open Sans Hebrew Condensed — display headline font (Apache-2.0, Google early-access) */
+@font-face {
+  font-family: "Open Sans Hebrew Condensed";
+  src: url("/assets/fonts/osh-condensed/OpenSansHebrewCondensed-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans Hebrew Condensed";
+  src: url("/assets/fonts/osh-condensed/OpenSansHebrewCondensed-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans Hebrew Condensed";
+  src: url("/assets/fonts/osh-condensed/OpenSansHebrewCondensed-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans Hebrew Condensed";
+  src: url("/assets/fonts/osh-condensed/OpenSansHebrewCondensed-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}

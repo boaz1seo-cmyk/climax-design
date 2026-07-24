@@ -1,0 +1,62 @@
+---
+layout: layouts/base.njk
+lang: he
+dir: rtl
+navActive: none
+permalink: /icon-test/index.html
+title: "בחירת כיוון סגנוני — אייקונים"
+description: "עמוד בדיקה פנימי — לא חלק מהאתר הסופי."
+eleventyExcludeFromCollections: true
+---
+{% import "macros/custom-icons.njk" as icons %}
+
+<section class="room" style="padding-block-start: calc(var(--header-h) + var(--space-2xl));">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>בחירת כיוון סגנוני</span>
+      <h1 class="display-heading" style="font-size: var(--step-h1);" data-animate>"אסטרטגיה" — שלוש גישות</h1>
+      <p class="prose" data-animate>נושא אחד, שלוש שפות ציור. גללו לאט — כל אייקון מצייר את עצמו. רעננו את העמוד כדי לראות את האנימציה שוב.</p>
+    </div>
+
+    <div class="icon-showcase" data-animate-group>
+      <div class="icon-stage" data-animate-item>
+        <span class="icon-stage__frame">{{ icons.strategyLineArt() }}</span>
+        <h3 class="icon-stage__title">A — הקו המתמשך</h3>
+        <p class="icon-stage__body">קו אחד רציף שלא מתנתק: מסע שעולה, קושר קשר אחד — התוכנית — וממשיך לטפס. האדום: נקודה בסוף הקו, כמו חתימה.</p>
+      </div>
+      <div class="icon-stage" data-animate-item>
+        <span class="icon-stage__frame">{{ icons.strategyGeometric() }}</span>
+        <h3 class="icon-stage__title">B — גיאומטריה אצילית</h3>
+        <p class="icon-stage__body">מעגלים קונצנטריים דקים וסימוני מצפן מדויקים, בסימטריה של מותג יוקרה. האדום: קו אלכסוני דק אחד — הכיוון הנבחר.</p>
+      </div>
+      <div class="icon-stage" data-animate-item>
+        <span class="icon-stage__frame">{{ icons.strategySketch() }}</span>
+        <h3 class="icon-stage__title">C — הרישום החופשי</h3>
+        <p class="icon-stage__body">יד בוטחת: הר בקו חי בעובי משתנה, מסלול טיפוס דק — ומעל הפסגה משיחת מכחול אדומה חופשית.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="room room--light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-animate>אותן גרסאות על רקע בהיר</span>
+      <h2 class="display-heading" style="font-size: var(--step-h1);" data-animate>הקו מתהפך, האדום נשאר</h2>
+    </div>
+    <div class="icon-showcase" data-animate-group>
+      <div class="icon-stage" data-animate-item>
+        <span class="icon-stage__frame">{{ icons.strategyLineArt() }}</span>
+        <h3 class="icon-stage__title">A — הקו המתמשך</h3>
+      </div>
+      <div class="icon-stage" data-animate-item>
+        <span class="icon-stage__frame">{{ icons.strategyGeometric() }}</span>
+        <h3 class="icon-stage__title">B — גיאומטריה אצילית</h3>
+      </div>
+      <div class="icon-stage" data-animate-item>
+        <span class="icon-stage__frame">{{ icons.strategySketch() }}</span>
+        <h3 class="icon-stage__title">C — הרישום החופשי</h3>
+      </div>
+    </div>
+  </div>
+</section>
