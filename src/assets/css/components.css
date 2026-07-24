@@ -1389,12 +1389,29 @@ a.contact-icons__link {
 @media (prefers-reduced-motion: reduce) {
   .client-marquee__track {
     animation: none;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: var(--space-lg) var(--space-md);
     width: 100%;
+    white-space: normal;
+  }
+  .client-marquee__track img {
+    max-width: 100%;
   }
   .client-marquee__track img[aria-hidden="true"] {
     display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) and (min-width: 640px) {
+  .client-marquee__track {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) and (min-width: 960px) {
+  .client-marquee__track {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
