@@ -34,7 +34,7 @@
     <button class="video-lightbox__close" type="button" data-video-lightbox-close aria-label="{{ 'סגירה' if lang == 'he' else 'Close' }}">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6L18 18M18 6L6 18"/></svg>
     </button>
-    <video data-video-lightbox-player controls playsinline></video>
+    <video data-video-lightbox-player controls playsinline controlsList="nodownload" oncontextmenu="return false"></video>
   </div>
 </div>
 {% endmacro %}
