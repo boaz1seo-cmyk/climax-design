@@ -53,6 +53,25 @@
   }
 
   /* ---------------------------------------------------------
+     Hero video: some mobile browsers (iOS Low Power Mode, the
+     Safari "Auto-Play Videos" setting) ignore the autoplay
+     attribute and show a native tap-to-play control instead.
+     Retry play() on load and again on the first user gesture so
+     it starts as soon as possible rather than sitting on that
+     control.
+     --------------------------------------------------------- */
+  var heroVideo = document.querySelector(".hero__media video");
+  if (heroVideo) {
+    var tryPlayHeroVideo = function () {
+      heroVideo.play().catch(function () {});
+    };
+    tryPlayHeroVideo();
+    ["touchstart", "click", "scroll"].forEach(function (evt) {
+      document.addEventListener(evt, tryPlayHeroVideo, { once: true, passive: true });
+    });
+  }
+
+  /* ---------------------------------------------------------
      Hero headline: crossfade loop between two lines. Line 1
      stays static under prefers-reduced-motion (no JS timer).
      --------------------------------------------------------- */
