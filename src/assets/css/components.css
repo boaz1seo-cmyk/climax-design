@@ -510,6 +510,14 @@
   align-items: center;
   gap: var(--space-lg);
 }
+@media (max-width: 640px) {
+  .hero__inner {
+    gap: var(--space-sm);
+  }
+  .hero__inner .btn {
+    width: 100%;
+  }
+}
 
 .display-heading {
   font-family: var(--font-display);
