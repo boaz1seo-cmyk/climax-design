@@ -16,6 +16,14 @@
     "href": "/works/cyprus/"
   },
   {
+    "id": "safari-branding",
+    "imageSrc": "/assets/works/branding/safari/home.jpg",
+    "category": "branding-design",
+    "titleHe": "ספארי: טיולים בזנזיבר וספארי — מיתוג מלא",
+    "titleEn": "Safari: Zanzibar Travel & Safari — Brand Identity",
+    "href": "/works/safari/"
+  },
+  {
     "id": "dgenfren-app",
     "image": "dgenfren-app-splash.jpg",
     "category": "digital-web",

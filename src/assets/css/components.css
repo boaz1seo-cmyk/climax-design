@@ -2131,6 +2131,20 @@ a.contact-icons__link {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.color-swatch-grid--five {
+  grid-template-columns: repeat(5, 1fr);
+  max-width: var(--content-max);
+}
+@media (max-width: 900px) {
+  .color-swatch-grid--five {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .color-swatch-grid--five {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .color-swatch {
   display: flex;
   flex-direction: column;
