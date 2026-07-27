@@ -8,6 +8,14 @@
     "href": "/works/batei-hadin/"
   },
   {
+    "id": "cyprus-branding",
+    "imageSrc": "/assets/works/branding/cyprus/home.jpg",
+    "category": "branding-design",
+    "titleHe": "לשכת המסחר ישראל-קפריסין: מיתוג מוסדי",
+    "titleEn": "Israel-Cyprus Chamber of Commerce: Brand Identity",
+    "href": "/works/cyprus/"
+  },
+  {
     "id": "dgenfren-app",
     "image": "dgenfren-app-splash.jpg",
     "category": "digital-web",

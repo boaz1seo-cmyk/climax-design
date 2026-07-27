@@ -2275,3 +2275,90 @@ a.contact-icons__link {
   z-index: -1;
 }
 
+/* =========================================================
+   Case study image lightbox — fullscreen viewer with
+   prev/next navigation, used by case-study gallery pages.
+   ========================================================= */
+.image-lightbox[hidden] {
+  display: none;
+}
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  /* Above .site-header's z-index:9999, so the close button (and
+     the whole overlay) never sits behind the fixed header. */
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.92);
+  border: none;
+  padding: 0;
+  cursor: zoom-out;
+}
+.image-lightbox__panel {
+  position: relative;
+  z-index: 1;
+  max-width: min(92vw, 80rem);
+  max-height: 90vh;
+  display: flex;
+}
+.image-lightbox__panel img {
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin-inline: auto;
+}
+.image-lightbox__close,
+.image-lightbox__nav {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(20, 20, 20, 0.6);
+  color: var(--c-white-pure);
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+.image-lightbox__close:hover,
+.image-lightbox__nav:hover {
+  background: rgba(20, 20, 20, 0.85);
+}
+.image-lightbox__close {
+  inset-block-start: -1rem;
+  inset-inline-end: -1rem;
+}
+@media (max-width: 640px) {
+  .image-lightbox__close {
+    inset-block-start: var(--space-sm);
+    inset-inline-end: var(--space-sm);
+  }
+}
+.image-lightbox__nav {
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+}
+.image-lightbox__nav--prev {
+  left: var(--space-sm);
+}
+.image-lightbox__nav--next {
+  right: var(--space-sm);
+}
+@media (max-width: 640px) {
+  .image-lightbox__nav {
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+  }
+}
+
