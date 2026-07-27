@@ -2362,3 +2362,22 @@ a.contact-icons__link {
   }
 }
 
+/* =========================================================
+   Cyprus case study — secondary accent touches, using the
+   Chamber's own Secondary Blue (#6781AD) as the "family" tint,
+   same pattern as the batei-hadin brandscape but with this
+   project's real sampled colors instead.
+   ========================================================= */
+.cyprus-brandscape .section-head::after {
+  content: "";
+  display: block;
+  inline-size: 3rem;
+  block-size: 3px;
+  border-radius: 2px;
+  margin-block-start: var(--space-2xs);
+  background: linear-gradient(90deg, #374887, #6781ad);
+}
+.cyprus-brandscape .color-swatch__circle {
+  box-shadow: 0 6px 16px -4px rgba(103, 129, 173, 0.35);
+}
+
