@@ -2145,6 +2145,15 @@ a.contact-icons__link {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.color-swatch-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 30rem;
+}
+@media (max-width: 480px) {
+  .color-swatch-grid--three {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .color-swatch {
   display: flex;
   flex-direction: column;
