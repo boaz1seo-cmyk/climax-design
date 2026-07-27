@@ -2102,6 +2102,14 @@ a.contact-icons__link {
   height: 100%;
   object-fit: cover;
 }
+/* Use when object-fit:cover would crop content arbitrarily (image's
+   own aspect ratio doesn't match the grid box) — shows the full
+   image, uncropped. Needs a background on the button that matches
+   the image's own edge tone, or the letterbox gap reads as a seam. */
+.case-gallery__item--contain img {
+  object-fit: contain;
+  height: auto;
+}
 .case-gallery__category + .case-gallery__category {
   margin-block-start: var(--space-2xl);
 }
