@@ -69,6 +69,28 @@
     ["touchstart", "click", "scroll"].forEach(function (evt) {
       document.addEventListener(evt, tryPlayHeroVideo, { once: true, passive: true });
     });
+
+    /* On slow/constrained connections (cellular data), don't let the
+       video download linger indefinitely — the poster image is
+       already a full static replacement, so on a timeout we stop
+       fetching to free bandwidth for the rest of the page rather
+       than have the request keep competing for it in the background. */
+    var heroVideoTimeout = window.setTimeout(function () {
+      if (heroVideo.readyState < 3) {
+        heroVideo.setAttribute("preload", "none");
+        heroVideo.querySelectorAll("source").forEach(function (s) {
+          s.removeAttribute("src");
+        });
+        heroVideo.load();
+      }
+    }, 3500);
+    heroVideo.addEventListener(
+      "canplay",
+      function () {
+        window.clearTimeout(heroVideoTimeout);
+      },
+      { once: true }
+    );
   }
 
   /* ---------------------------------------------------------
